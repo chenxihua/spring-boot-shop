@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册页面</title>
+    <link rel="stylesheet" th:href="@{/static/css/font.css}">
+    <link rel="stylesheet" th:href="@{/static/css/weadmin.css}">
+    <script type="text/javascript" th:src="@{/static/layui/layui.js}" charset="utf-8" ></script>
+
+
+</head>
+<body>
+
+
+    <form class="layui-form" action="" lay-filter="userRegister">
+
+        <br><br>
+        <div class="layui-form-item"><!--layui-inline-->
+            <label class="layui-form-label">所在学校</label>
+            <div class="layui-input-inline">
+                <select name="schoolId" lay-verify="required" lay-search="" lay-filter="schoolSelect">
+                    <!--<option value="">直接选择或搜索选择</option>-->
+                    <!--<option th:each="school:${schools}" th:value="${school.id}" th:text="${school.fullName}"></option>-->
+                </select>
+                <!--<select name="schoolId" required lay-verify="required" lay-search="">
+                    <option value="">直接选择或搜索选择</option>
+                    <option th:each="school:${schools}" th:value="${school.id}" th:text="${school.fullName}"></option>
+                </select>-->
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户昵称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="account"  lay-verify="required" placeholder="昵称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">真实姓名</label>
+            <div class="layui-input-inline">
+                <input type="text" name="realName"  lay-verify="required" placeholder="真实姓名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码框</label>
+            <div class="layui-input-inline">
+                <input type="password" name="password" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">辅助文字</div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">邮箱</label>
+            <div class="layui-input-inline">
+                <input type="email" name="email"  lay-verify="required" placeholder="邮箱" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">单选框</label>
+            <div class="layui-input-inline">
+                <input type="radio" name="sex" value="1" title="男" checked>
+                <input type="radio" name="sex" value="0" title="女">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+        var layer = layui.layer;
+        var layedit = layui.layedit;
+        var laydate = layui.laydate;
+        var $ = layui.$;
+
+        //渲染所有下拉框
+        loadAllSelect();
+
+
+        function loadAllSelect(){
+            // 加载学校下拉框。
+            loadSchoolSelect();
+            // form.render(null,'userRegister');
+        }
+
+        function loadSchoolSelect(){
+            console.log("你好，json")
+            layer.msg("什么结构？")
+            $.ajax({
+                url:'/user/loadSchools',
+                type:'post',
+                dataType:'json',
+                async:false,
+                success:function (data) {
+                    console.log(data);
+                }
+            });
+        }
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+
+</body>
+</html>

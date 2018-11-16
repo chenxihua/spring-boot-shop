@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学校注册</title>
+    <link rel="stylesheet" th:href="@{/static/css/font.css}">
+    <link rel="stylesheet" th:href="@{/static/css/weadmin.css}">
+    <script type="text/javascript" th:src="@{/static/layui/layui.js}" charset="utf-8" ></script>
+
+</head>
+<body>
+
+    <form class="layui-form" action="" lay-filter="schoolRegister">
+
+        <br><br>
+        <div class="layui-form-item"><!--layui-inline-->
+            <label class="layui-form-label">所在省份</label>
+            <div class="layui-input-inline">
+                <select id="partionSelect" name="areaId" lay-verify="required" lay-search="" lay-filter="partionSelect">
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">学校全名</label>
+            <div class="layui-input-inline">
+                <input type="text" name="fullName" lay-verify="required" placeholder="学校全名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">学校简称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="name" lay-verify="required" placeholder="学校简称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">学校详细地址</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" lay-verify="required" placeholder="学校详细地址" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submitForm">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+        var layer = layui.layer;
+        var $ = layui.$;
+
+        //渲染所有下拉框
+        loadAllSelect();
+
+        // 渲染下拉框
+        function loadAllSelect(){
+            loadSchoolSelect();//加载分配人下拉框
+            form.render(null,'schoolRegister'); //更新 lay-filter="schoolRegister" 所在容器内的全部表单状态
+        }
+
+        function loadSchoolSelect(){
+            $.ajax({
+                url:"/user/loadPartion",
+                type:"GET",
+                dataType:"json",
+                async:false,
+                success:function(data){
+                    console.log(data);
+                    var html = "";
+                    if(data.success){
+                        $("#partionSelect").html("");
+                        var partions = data.data;
+                        html += "<option value=''>直接选择或者搜索</option>"
+                        var len = partions.length;
+                        for(i=0; i<len; i++){
+                            html += "<option value='"+partions[i].id+"'>"+partions[i].name+"</option>"
+                        }
+                        $("#partionSelect").html(html);
+                    }else{
+                        layer.msg("服务器出错了");
+                    }
+                }
+            });
+        }
+
+        //监听提交
+        form.on('submit(submitForm)', function(data){
+            // layer.msg(JSON.stringify(data.field));
+            var formDate = data.field;
+            $.ajax({
+                url:"/user/savaSchool",
+                type:"POST",
+                data:formDate,
+                dataType:"json",
+                success:function (data) {
+                    console.log(data.msg);
+                }
+            });
+
+            return false;
+
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
