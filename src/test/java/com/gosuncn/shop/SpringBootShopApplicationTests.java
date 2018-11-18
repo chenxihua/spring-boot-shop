@@ -19,17 +19,18 @@ public class SpringBootShopApplicationTests {
     @Autowired
     UserDao userDao;
 
-    @Autowired
-    SchoolDao schoolDao;
+//    @Autowired
+//    SchoolDao schoolDao;
+
 
     @Test
     public void contextLoads() {
 
         //User user = new User(null, "aaa", null, "aaa@qq.com", );
-        List<School> schools = schoolDao.findAll();
-        for (School school : schools) {
-            System.out.println(school);
-        }
+//        List<School> schools = schoolDao.findAll();
+//        for (School school : schools) {
+//            System.out.println(school);
+//        }
 
     }
 

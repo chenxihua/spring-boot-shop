@@ -5,8 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * @Author: chenxihua
+ * @Date: 2018/11/15
+ */
 @SpringBootApplication
-//这行是为了避免扫描不到Druid的Servlet
+/**
+ * 这行是为了避免扫描不到Druid的Servlet
+ */
 @ServletComponentScan
 public class SpringBootShopApplication {
 
