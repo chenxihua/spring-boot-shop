@@ -23,7 +23,6 @@ public class Administrator implements Serializable {
     private String realName;
     private String account;
     private String password;
-    @Column(name = "role_id")
     private Integer roleId;
     private String salt;
     private String email;

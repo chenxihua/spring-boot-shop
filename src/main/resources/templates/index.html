@@ -38,21 +38,17 @@
 
     //一般直接写在一个js文件中
     layui.use(['layer', 'form'], function(){
-        var layer = layui.layer
-            ,form = layui.form
-            ,$ = layui.$;
-
-        layer.msg('Hello World');
-
+        var layer = layui.layer;
+        var form = layui.form;
+        var $ = layui.$;
 
         $("#regSchool").click(function () {
-            console.log("go ....")
-            var url="/user/submitSchool";
+            var url="/user/applySchool";
             layer.open({
                 type: 2,
                 area: ['600px', '450px'],
                 title: '申请注册学校',
-                content: url
+                content: [url, 'no']
             })
         });
 

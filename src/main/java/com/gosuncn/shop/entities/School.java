@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author: chenxihua
@@ -25,6 +26,9 @@ public class School implements Serializable {
     private String address;
     private String phone;
     private String fax;
+
+    @Column(name = "apply_time")
+    private Date applyTime;
     private String description;
     private Integer status;
 

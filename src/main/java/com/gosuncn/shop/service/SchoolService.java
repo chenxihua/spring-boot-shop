@@ -9,7 +9,6 @@ import java.util.List;
  * @author: chenxihua
  * @Date: 2018-11-16:16:58
  */
-//@Service
 public interface SchoolService {
 
     public boolean saveSchoolInfo(School school);

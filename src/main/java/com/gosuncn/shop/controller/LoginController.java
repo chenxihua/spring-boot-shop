@@ -7,16 +7,15 @@ import com.gosuncn.shop.entities.Province;
 import com.gosuncn.shop.entities.School;
 import com.gosuncn.shop.entities.User;
 import com.gosuncn.shop.service.SchoolService;
+import com.gosuncn.shop.service.UserService;
+import com.gosuncn.shop.util.PasswordHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * @author: chenxihua
@@ -28,11 +27,9 @@ import java.util.Optional;
 public class LoginController {
 
     @Autowired
-    SchoolService schoolService;
-    @Autowired
-    ProvinceDao provinceDao;
+    UserService userService;
 
-
+    PasswordHelper passwordHelper;
 
 
     @RequestMapping("/register")
@@ -40,51 +37,51 @@ public class LoginController {
         return "user/register";
     }
 
-    @RequestMapping("/submitSchool")
+    @RequestMapping("/applySchool")
     public String upSchool(){
         return "user/schools";
     }
 
+
+    /**
+     * 注册系统新用户（学生注册）
+     * @param user
+     * @return
+     */
     @ResponseBody
-    @RequestMapping(value = "/loadSchools", method = RequestMethod.POST)
-    public Map<String, Object> getAllSchools(){
-        Map<String, Object> map = new HashMap<>();
-        List<School> schools = schoolService.findAllSchoolInfos();
-        map.put("code", 0);
-        map.put("data", schools);
-        map.put("success", true);
-        map.put("msg", "查询所有学校");
-        return map;
-    }
+    @RequestMapping("/saveByRegister")
+    public Map<String, Object> saveUser(User user){
+        Map<String, Object> map =  new HashMap<>();
+        String oldPassword = user.getPassword();
 
-
-    @ResponseBody
-    @GetMapping(value = "/loadPartion")
-    public Map<String, Object> getAllPartions(){
-        Map<String, Object> map = new HashMap<>();
-        List<Province> provinces = provinceDao.findAll();
-        map.put("code", 0);
-        map.put("data", provinces);
-        map.put("success", true);
-        map.put("msg", "查询所有省份");
-        return map;
-    }
-
-    @PostMapping(name = "/savaSchool")
-    public Map<String, Object> saveApplySchool(School school){
-        Map<String, Object> map = new HashMap<>();
-        boolean info = schoolService.saveSchoolInfo(school);
-        if(info){
-            map.put("code", 0);
-            map.put("success", true);
-            map.put("msg", "保存成功");
-        }else {
+        Map<String, Object> passwordMap = PasswordHelper.encryptPassword(oldPassword);
+        boolean canable = (boolean) passwordMap.get("canable");
+        if(canable){
+            user.setPassword((String) passwordMap.get("newPassword"));
+            user.setSalt((String) passwordMap.get("salt"));
+            user.setStatus(1);
+            user.setSignTime(new Date());
+            boolean userFlag = userService.saveOneUser(user);
+            if (userFlag){
+                map.put("code", 0);
+                map.put("success", true);
+                map.put("msg", "你注册用户已成功");
+            }else {
+                map.put("code", 0);
+                map.put("success", false);
+                map.put("msg", "你注册用户已失败");
+            }
+        }else{
             map.put("code", 0);
             map.put("success", false);
-            map.put("msg", "保存失败");
+            map.put("msg", (String) passwordMap.get("message"));
         }
         return map;
     }
+
+
+
+
 
 
 

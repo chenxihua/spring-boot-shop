@@ -23,10 +23,13 @@ public class Comments implements Serializable {
     private Integer provideService;
     @Column(name = "publish_man")
     private Integer publishMan;
+
     @Column(name = "user_id")
     private Integer userId;
     private String description;
-    private Date time;
+
+    @Column(name = "comment_time")
+    private Date commentTime;
     @Column(name = "again_description")
     private String againDescription;
     @Column(name = "again_time")

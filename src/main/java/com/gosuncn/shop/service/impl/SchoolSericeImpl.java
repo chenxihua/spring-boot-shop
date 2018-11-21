@@ -22,9 +22,9 @@ public class SchoolSericeImpl implements SchoolService {
     @Override
     public boolean saveSchoolInfo(School school) {
         School save = schoolDao.save(school);
-        if (StringUtils.isEmpty(save)){
+        if(save != null){
             return true;
-        }else {
+        }else{
             return false;
         }
     }

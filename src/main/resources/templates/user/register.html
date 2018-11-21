@@ -18,10 +18,7 @@
         <div class="layui-form-item"><!--layui-inline-->
             <label class="layui-form-label">所在学校</label>
             <div class="layui-input-inline">
-                <select name="schoolId" lay-verify="required" lay-search="" lay-filter="schoolSelect">
-                    <!--<option value="">直接选择或搜索选择</option>-->
-                    <!--<option th:each="school:${schools}" th:value="${school.id}" th:text="${school.fullName}"></option>-->
-                </select>
+                <select id="schoolSelect" name="schoolId" lay-verify="required" lay-search="" lay-filter="schoolSelect"></select>
                 <!--<select name="schoolId" required lay-verify="required" lay-search="">
                     <option value="">直接选择或搜索选择</option>
                     <option th:each="school:${schools}" th:value="${school.id}" th:text="${school.fullName}"></option>
@@ -37,20 +34,20 @@
         <div class="layui-form-item">
             <label class="layui-form-label">真实姓名</label>
             <div class="layui-input-inline">
-                <input type="text" name="realName"  lay-verify="required" placeholder="真实姓名" autocomplete="off" class="layui-input">
+                <input type="text" name="realName"  lay-verify="required|username" placeholder="真实姓名" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">密码框</label>
             <div class="layui-input-inline">
-                <input type="password" name="password" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                <input type="password" name="password" lay-verify="required|pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux">辅助文字</div>
+            <div class="layui-form-mid layui-word-aux">qing</div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">邮箱</label>
             <div class="layui-input-inline">
-                <input type="email" name="email"  lay-verify="required" placeholder="邮箱" autocomplete="off" class="layui-input">
+                <input type="email" name="email" lay-verify="required|emValue" placeholder="123456789@163.com" autocomplete="off" class="layui-input">
             </div>
         </div>
 
@@ -72,42 +69,86 @@
 
 <script>
     //Demo
-    layui.use('form', function(){
+    layui.use(['form','layer'], function(){
         var form = layui.form;
         var layer = layui.layer;
-        var layedit = layui.layedit;
-        var laydate = layui.laydate;
         var $ = layui.$;
+
+        // 表单检验
+        form.verify({
+            username: function(value, item){ //value：表单的值、item：表单的DOM对象
+                if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
+                    return '用户名不能有特殊字符';
+                }
+                if(/(^\_)|(\__)|(\_+$)/.test(value)){
+                    return '用户名首尾不能出现下划线\'_\'';
+                }
+                if(/^\d+\d+\d$/.test(value)){
+                    return '用户名不能全为数字';
+                }
+            },
+            //我们既支持上述函数式的方式，也支持下述数组的形式
+            //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
+            pass: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
+            emValue:[/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,'邮箱格式不正确，请重新输入',
+                /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/,'邮箱格式不正确，请重新输入']
+        });
 
         //渲染所有下拉框
         loadAllSelect();
 
-
         function loadAllSelect(){
             // 加载学校下拉框。
             loadSchoolSelect();
-            // form.render(null,'userRegister');
+            // 重新渲染表单
+            form.render(null,'userRegister');
         }
 
         function loadSchoolSelect(){
-            console.log("你好，json")
-            layer.msg("什么结构？")
             $.ajax({
-                url:'/user/loadSchools',
-                type:'post',
+                url:'/school/getSchools',
+                type:'GET',
                 dataType:'json',
                 async:false,
                 success:function (data) {
-                    console.log(data);
+                    var html = "";
+                    if(data.success) {
+                        $("#schoolSelect").html("");
+                        var schools = data.data;
+                        html += "<option value=''>直接选择或者搜索</option>";
+                        var lens = schools.length;
+                        for (i=0; i<lens; i++) {
+                            html += "<option value='"+schools[i].id+"'>"+schools[i].fullName+"</option>";
+                        }
+                        $("#schoolSelect").html(html);
+                    }else {
+                        layer.msg("服务器读取学校信息出错");
+                    }
                 }
             });
         }
 
-        //监听提交
+        //提交注册用户，监听提交
         form.on('submit(formDemo)', function(data){
-            layer.msg(JSON.stringify(data.field));
+            var userDatas = data.field;
+            $.ajax({
+                url:"/user/saveByRegister",
+                type:"POST",
+                data:userDatas,
+                dataType:"json",
+                success: function (data) {
+                    if(data.success){
+                        top.layer.msg("注册成功，可以登录系统了", {time:3000});
+                        //关闭当前弹出层
+                        var topIndex = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(topIndex);
+                    }
+                }
+            });
             return false;
         });
+
+
     });
 </script>
 

@@ -23,7 +23,9 @@ public class Essays implements Serializable {
     @Column(name = "user_id")
     private Integer userId;
     private String content;
-    private Date time;
+
+    @Column(name = "publish_time")
+    private Date publishTime;
     private Integer loves;
     private Integer hates;
     private Integer looks;

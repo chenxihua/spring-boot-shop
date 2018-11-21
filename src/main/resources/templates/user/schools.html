@@ -23,19 +23,19 @@
         <div class="layui-form-item">
             <label class="layui-form-label">学校全名</label>
             <div class="layui-input-inline">
-                <input type="text" name="fullName" lay-verify="required" placeholder="学校全名" autocomplete="off" class="layui-input">
+                <input type="text" name="fullName" lay-verify="required|full" placeholder="学校全名" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">学校简称</label>
             <div class="layui-input-inline">
-                <input type="text" name="name" lay-verify="required" placeholder="学校简称" autocomplete="off" class="layui-input">
+                <input type="text" name="name" lay-verify="required|simple" placeholder="学校简称" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">学校详细地址</label>
             <div class="layui-input-block">
-                <input type="text" name="address" lay-verify="required" placeholder="学校详细地址" autocomplete="off" class="layui-input">
+                <input type="text" name="address" lay-verify="required|allAdr" placeholder="学校详细地址" autocomplete="off" class="layui-input">
             </div>
         </div>
 
@@ -49,33 +49,59 @@
 
 <script>
     //Demo
-    layui.use('form', function(){
+    layui.use(['form','layer'], function(){
         var form = layui.form;
         var layer = layui.layer;
         var $ = layui.$;
+
+        // 表单检验
+        form.verify({
+            full: function(value, item){ //value：表单的值、item：表单的DOM对象
+                if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
+                    return '学校名不能有特殊字符';
+                }
+                if(/(^\_)|(\__)|(\_+$)/.test(value)){
+                    return '学校名首尾不能出现下划线\'_\'';
+                }
+                if(/^\d+\d+\d$/.test(value)){
+                    return '学校名不能全为数字';
+                }
+                if(/^[\u2E80-\u9FFF]+$/.test(value)){
+                    return '学校名必须为汉字';
+                }
+            },
+            simple: [/^[a-zA-Z0-9_\u4e00-\u9fa5\s·]+$/,'学校简称不能有特殊字符',
+                /(^\_)|(\__)|(\_+$)/,'学校简称首字母不能有下划线',
+                /^[\u2E80-\u9FFF]+$/,'学校简称必须为汉字'],
+            allAdr: [/^[a-zA-Z0-9_\u4e00-\u9fa5\s·]+$/,'学校具体地址不能有特殊字符',
+                /(^\_)|(\__)|(\_+$)/,'学校具体地址首字母不能有下划线',
+                /^\d+\d+\d$/,'学校具体地址不能全为数字',
+                /^[\u2E80-\u9FFF]+$/,'学校具体地址必须为汉字']
+        });
 
         //渲染所有下拉框
         loadAllSelect();
 
         // 渲染下拉框
         function loadAllSelect(){
-            loadSchoolSelect();//加载分配人下拉框
-            form.render(null,'schoolRegister'); //更新 lay-filter="schoolRegister" 所在容器内的全部表单状态
+            //加载分配人下拉框
+            loadSchoolSelect();
+            //更新 lay-filter="schoolRegister" 所在容器内的全部表单状态
+            form.render(null,'schoolRegister');
         }
 
         function loadSchoolSelect(){
             $.ajax({
-                url:"/user/loadPartion",
+                url:"/school/getPartions",
                 type:"GET",
                 dataType:"json",
                 async:false,
                 success:function(data){
-                    console.log(data);
                     var html = "";
                     if(data.success){
                         $("#partionSelect").html("");
                         var partions = data.data;
-                        html += "<option value=''>直接选择或者搜索</option>"
+                        html += "<option value=''>直接选择或者搜索</option>";
                         var len = partions.length;
                         for(i=0; i<len; i++){
                             html += "<option value='"+partions[i].id+"'>"+partions[i].name+"</option>"
@@ -90,21 +116,25 @@
 
         //监听提交
         form.on('submit(submitForm)', function(data){
-            // layer.msg(JSON.stringify(data.field));
             var formDate = data.field;
             $.ajax({
-                url:"/user/savaSchool",
+                url:"/school/saveSchool",
                 type:"POST",
                 data:formDate,
                 dataType:"json",
                 success:function (data) {
-                    console.log(data.msg);
+                    if(data.success){
+                        top.layer.msg("申请学校成功，等待管理员审核", {time:3000});
+                        //关闭当前弹出层
+                        var topIndex = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(topIndex);
+                    }
                 }
             });
-
             return false;
-
         });
+
+
     });
 </script>
 
