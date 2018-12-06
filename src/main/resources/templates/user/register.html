@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>用户注册页面</title>
-    <link rel="stylesheet" th:href="@{/static/css/font.css}">
-    <link rel="stylesheet" th:href="@{/static/css/weadmin.css}">
-    <script type="text/javascript" th:src="@{/static/layui/layui.js}" charset="utf-8" ></script>
+    <link rel="stylesheet" th:href="@{/statics/css/font.css}">
+    <link rel="stylesheet" th:href="@{/statics/css/weadmin.css}">
+    <script type="text/javascript" th:src="@{/statics/layui/layui.js}" charset="utf-8" ></script>
 
 
 </head>
@@ -28,7 +28,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">用户昵称</label>
             <div class="layui-input-inline">
-                <input type="text" name="account"  lay-verify="required" placeholder="昵称" autocomplete="off" class="layui-input">
+                <input type="text" name="account" th:id="btnAccout" lay-verify="required" placeholder="昵称" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
@@ -42,12 +42,12 @@
             <div class="layui-input-inline">
                 <input type="password" name="password" lay-verify="required|pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux">qing</div>
+            <div class="layui-form-mid layui-word-aux"><!-- 可以在这里输入文字 --></div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">邮箱</label>
             <div class="layui-input-inline">
-                <input type="email" name="email" lay-verify="required|emValue" placeholder="123456789@163.com" autocomplete="off" class="layui-input">
+                <input type="email" name="email" th:id="btnEmail" lay-verify="required|emValue" placeholder="123456789@163.com" autocomplete="off" class="layui-input">
             </div>
         </div>
 
@@ -68,7 +68,7 @@
     </form>
 
 <script>
-    //Demo
+
     layui.use(['form','layer'], function(){
         var form = layui.form;
         var layer = layui.layer;
@@ -99,16 +99,17 @@
 
         function loadAllSelect(){
             // 加载学校下拉框。
-            loadSchoolSelect();
+            loadSchoolSelects();
             // 重新渲染表单
             form.render(null,'userRegister');
         }
 
-        function loadSchoolSelect(){
+        function loadSchoolSelects(){
+            console.log("重新渲染到这里。。。")
             $.ajax({
-                url:'/school/getSchools',
-                type:'GET',
-                dataType:'json',
+                url:"/school/getSchools",
+                type:"GET",
+                dataType:"json",
                 async:false,
                 success:function (data) {
                     var html = "";
@@ -127,6 +128,42 @@
                 }
             });
         }
+
+        // 输入失去焦点事件(查询昵称是否已经被注册)
+        $("#btnAccout").on('blur', function () {
+            var accountValue = $('#btnAccout').val();
+            $.ajax({
+                url:"/user/accountVerify",
+                type:"GET",
+                data:{'accountValue':accountValue, 'pattern':"acc"},
+                dataType:"json",
+                success: function (data) {
+                    if(data.success){
+                        // 如果已经存在，则清空这个input框。
+                        $('#btnAccout').val('');
+                        top.layer.msg(data.msg, {time:3000});
+                    }
+                }
+            });
+        });
+
+        // 输入失去焦点事件(查询邮箱是否已经被注册)
+        $("#btnEmail").on('blur', function () {
+            var emailValue = $('#btnEmail').val();
+            $.ajax({
+                url:"/user/emailVerify",
+                type:"GET",
+                data:{"emailValue":emailValue, "pattern":"emi"},
+                dataType:"json",
+                success: function (data) {
+                    if(data.success){
+                        // 如果已经存在，则清空这个input框
+                        $('#btnEmail').val('');
+                        top.layer.msg(data.msg, {time:3000});
+                    }
+                }
+            });
+        });
 
         //提交注册用户，监听提交
         form.on('submit(formDemo)', function(data){

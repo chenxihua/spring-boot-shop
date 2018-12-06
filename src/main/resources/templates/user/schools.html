@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>学校注册</title>
-    <link rel="stylesheet" th:href="@{/static/css/font.css}">
-    <link rel="stylesheet" th:href="@{/static/css/weadmin.css}">
-    <script type="text/javascript" th:src="@{/static/layui/layui.js}" charset="utf-8" ></script>
+    <link rel="stylesheet" th:href="@{/statics/css/font.css}">
+    <link rel="stylesheet" th:href="@{/statics/css/weadmin.css}">
+    <script type="text/javascript" th:src="@{/statics/layui/layui.js}" charset="utf-8" ></script>
 
 </head>
 <body>
@@ -48,7 +48,7 @@
     </form>
 
 <script>
-    //Demo
+
     layui.use(['form','layer'], function(){
         var form = layui.form;
         var layer = layui.layer;
@@ -66,17 +66,12 @@
                 if(/^\d+\d+\d$/.test(value)){
                     return '学校名不能全为数字';
                 }
-                if(/^[\u2E80-\u9FFF]+$/.test(value)){
-                    return '学校名必须为汉字';
-                }
             },
             simple: [/^[a-zA-Z0-9_\u4e00-\u9fa5\s·]+$/,'学校简称不能有特殊字符',
-                /(^\_)|(\__)|(\_+$)/,'学校简称首字母不能有下划线',
-                /^[\u2E80-\u9FFF]+$/,'学校简称必须为汉字'],
+                /(^\_)|(\__)|(\_+$)/,'学校简称首字母不能有下划线'],
             allAdr: [/^[a-zA-Z0-9_\u4e00-\u9fa5\s·]+$/,'学校具体地址不能有特殊字符',
                 /(^\_)|(\__)|(\_+$)/,'学校具体地址首字母不能有下划线',
-                /^\d+\d+\d$/,'学校具体地址不能全为数字',
-                /^[\u2E80-\u9FFF]+$/,'学校具体地址必须为汉字']
+                /^\d+\d+\d$/,'学校具体地址不能全为数字']
         });
 
         //渲染所有下拉框
@@ -99,6 +94,7 @@
                 success:function(data){
                     var html = "";
                     if(data.success){
+                        console.log(data.success);
                         $("#partionSelect").html("");
                         var partions = data.data;
                         html += "<option value=''>直接选择或者搜索</option>";

@@ -1,9 +1,7 @@
 package com.gosuncn.shop.config;
 
-import com.gosuncn.shop.interception.LoginInterception;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -29,17 +27,6 @@ public class MyWebMvcConfig implements WebMvcConfigurer {
                 registry.addViewController("/login").setViewName("index");
             }
 
-            /**
-             * 增加自己的拦截器
-             * @param registry
-             */
-            @Override
-            public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(new LoginInterception()).addPathPatterns("/**")
-                        .excludePathPatterns("/login.html","/login","/","/school/getSchools","/school/getPartions",
-                                "/user/register","/user/applySchool","/school/saveSchool","/static/**",
-                                "/user/saveByRegister");
-            }
         };
         return webMvcConfigurer;
     }
