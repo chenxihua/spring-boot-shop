@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>用户注册页面</title>
-    <link rel="stylesheet" th:href="@{/statics/css/font.css}">
-    <link rel="stylesheet" th:href="@{/statics/css/weadmin.css}">
-    <script type="text/javascript" th:src="@{/statics/layui/layui.js}" charset="utf-8" ></script>
+
+<link rel="stylesheet" th:href="@{/statics/css/font.css}">
+<link rel="stylesheet" th:href="@{/statics/css/weadmin.css}">
+<script type="text/javascript" th:src="@{/statics/layui/layui.js}" charset="utf-8" ></script>
 
 
 </head>
@@ -19,10 +20,6 @@
             <label class="layui-form-label">所在学校</label>
             <div class="layui-input-inline">
                 <select id="schoolSelect" name="schoolId" lay-verify="required" lay-search="" lay-filter="schoolSelect"></select>
-                <!--<select name="schoolId" required lay-verify="required" lay-search="">
-                    <option value="">直接选择或搜索选择</option>
-                    <option th:each="school:${schools}" th:value="${school.id}" th:text="${school.fullName}"></option>
-                </select>-->
             </div>
         </div>
         <div class="layui-form-item">

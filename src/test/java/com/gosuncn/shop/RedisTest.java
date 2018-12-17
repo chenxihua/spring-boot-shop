@@ -26,7 +26,7 @@ public class RedisTest {
 
     @Test
     public void testRedisOne(){
-        redisTemplate.opsForValue().set("chen","zhong");
+        redisTemplate.opsForValue().set("gasun","zhong");
         log.info("--->" + redisTemplate.toString());
     }
 

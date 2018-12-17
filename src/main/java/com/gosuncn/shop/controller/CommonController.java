@@ -29,10 +29,22 @@ public class CommonController {
         return "user/schools";
     }
 
-
-    @RequestMapping("/loginIndex")
+    @RequestMapping(value = "/loginIndex")
     public String loginSuccess(){
         log.info("----> : can go this...");
         return "pages/userLogin";
     }
+
+    @RequestMapping(value = "/gotoFirstPage")
+    public String allGotoFirst(){
+        log.info("--->: all goto this page...");
+        return "pages/userLogin";
+    }
+
+    @RequestMapping(value = "/lookForGoods")
+    public String searchAllGoods(){
+        return "goods/lookGoods";
+    }
+
+
 }

@@ -31,6 +31,7 @@ public class shiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
 
         Map<String, String> map = new HashMap<String, String>();
+        map.put("/layui/**", "anon");
         map.put("/statics/**", "anon");
         map.put("/favicon.ico", "anon");
         map.put("/", "anon");
@@ -47,7 +48,7 @@ public class shiroConfig {
         map.put("/common/firstIndex", "user");
         map.put("/druid/**", "user");
         // 登出
-        map.put("/logout", "logout");
+        map.put("/common/logout", "logout");
         // 对所有用户进行验证
         map.put("/**", "user");
 

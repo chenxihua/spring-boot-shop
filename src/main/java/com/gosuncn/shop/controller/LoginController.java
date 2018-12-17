@@ -151,8 +151,6 @@ public class LoginController {
             return map;
         }
 
-
-
         Subject currentUser = SecurityUtils.getSubject();
         //验证是否登录成功
         if (!currentUser.isAuthenticated()){

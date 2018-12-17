@@ -2,6 +2,7 @@ package com.gosuncn.shop.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -25,9 +26,16 @@ public class MyWebMvcConfig implements WebMvcConfigurer {
                 registry.addViewController("/").setViewName("index");
                 registry.addViewController("login.html").setViewName("index");
                 registry.addViewController("/login").setViewName("index");
+                registry.addViewController("/logout").setViewName("index");
             }
 
+//            @Override
+//            public void addFormatters(FormatterRegistry registry) {
+//
+//            }
         };
+
+
         return webMvcConfigurer;
     }
 
