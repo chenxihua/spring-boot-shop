@@ -46,5 +46,10 @@ public class CommonController {
         return "goods/lookGoods";
     }
 
+    @RequestMapping(value = "/releaseGoods")
+    public String releaseUpGood(){
+        return "goods/upGoods";
+    }
+
 
 }

@@ -12,12 +12,10 @@
 </head>
 <body>
 
-<!--<h1 th:text="你好用户"> 你好，测试 </h1>
-<a href="/logout" th:href="@{/logout}">退出系统</a>-->
 
 <div class="layui-layout layui-layout-admin" id="layui_layout">
     <!-- 顶部区域 -->
-    <div class="layui-header header header-demo">
+    <div class="layui-header header header-demo" th:fragment="topbars">
         <div class="layui-main">
             <!-- logo区域 -->
             <div class="admin-logo-box">
@@ -37,8 +35,9 @@
             </ul>
         </div>
     </div>
+
     <!-- 左侧侧边导航开始 -->
-    <div class="layui-side layui-side-bg layui-larry-side" id="larry-side">
+    <div class="layui-side layui-side-bg layui-larry-side" id="larry-side" th:fragment="sidebars">
         <div class="layui-side-scroll" id="larry-nav-side" lay-filter="side">
 
             <!-- 左侧菜单 -->
@@ -47,32 +46,64 @@
                                                          data-url=""> <i
                         class="iconfont icon-home1" data-icon='icon-home1'></i> <span>平台首页</span>
                 </a></li>
-                    <!-- 销售机会模块 -->
+                    <!-- 二手商品展区 -->
                     <li class="layui-nav-item"><a href="javascript:;"> <i
                             class="iconfont icon-jiaoseguanli2"></i> <span>二手商品展区</span> <em
                             class="layui-nav-more"></em>
                     </a>
                         <dl class="layui-nav-child">
-                                <dd>
-                                    <a th:href="@{/common/lookForGoods}" data-url="">
-                                        <i class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i>
-                                        <span>查看二手商品</span>
-                                    </a>
-                                </dd>
-                        </dl></li>
+                            <dd>
+                                <a th:href="@{/common/releaseGoods}" data-url="">
+                                    <i class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i>
+                                    <span>发布二手商品</span>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a th:href="@{/common/lookForGoods}" data-url="">
+                                    <i class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i>
+                                    <span>查看二手商品</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
 
-                    <!-- 统计报表模块 -->
+                    <!-- 购物车区 -->
                     <li class="layui-nav-item"><a href="javascript:;"> <i
-                            class="iconfont icon-jiaoseguanli2"></i> <span>统计报表</span> <em
+                            class="iconfont icon-jiaoseguanli2"></i> <span>购物车专区</span> <em
                             class="layui-nav-more"></em>
                     </a>
                         <dl class="layui-nav-child">
-                                <dd>
-                                    <a href="javascript:;" data-url=""> <i
-                                            class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i> <span>客户贡献度分析</span>
-                                    </a>
-                                </dd>
-                        </dl></li>
+                            <dd>
+                                <a href="javascript:;" data-url=""> <i
+                                        class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i> <span>我的收藏</span>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url=""> <i
+                                        class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i> <span>我的订单</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+
+                <!-- 个人中心 -->
+                <li class="layui-nav-item"><a href="javascript:;"> <i
+                        class="iconfont icon-jiaoseguanli2"></i> <span>个人账户中心</span> <em
+                        class="layui-nav-more"></em>
+                </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" data-url=""> <i
+                                    class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i> <span>个人信息中心</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url=""> <i
+                                    class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i> <span>修改密码</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
 
                 <!-- ------------------------以上为新增额外功能---------------------------- -->
 
@@ -87,18 +118,18 @@
         <div class="layui-tab layui-tab-card larry-tab-box" id="larry-tab"
              lay-filter="demo" lay-allowclose="true">
             <div class="go-left key-press pressKey" id="titleLeft"
-                 title="滚动至最右侧">
+                 title="滚动至最右侧" th:fragment="rollrightbar">
                 <i class="larry-icon larry-weibiaoti6-copy"></i>
             </div>
-            <ul class="layui-tab-title">
+            <ul class="layui-tab-title" th:fragment="rollcenterbar">
                 <li class="layui-this" id="admin-home"><i
                         class="iconfont icon-diannao1"></i><em>二手平台</em></li>
             </ul>
             <div class="go-right key-press pressKey" id="titleRight"
-                 title="滚动至最左侧">
+                 title="滚动至最左侧" th:fragment="rolllightbar">
                 <i class="larry-icon larry-right"></i>
             </div>
-            <ul class="layui-nav closeBox">
+            <ul class="layui-nav closeBox" th:fragment="advantagebars">
                 <li class="layui-nav-item"><a href="javascript:;"><i
                         class="iconfont icon-caozuo"></i> 页面操作</a>
                     <dl class="layui-nav-child">
@@ -127,7 +158,7 @@
         </div>
     </div>
     <!-- 底部区域 -->
-    <div class="layui-footer layui-larry-foot" id="larry-footer">
+    <div class="layui-footer layui-larry-foot" id="larry-footer" th:fragment="footbars">
         <div class="layui-mian">
             <p class="p-admin">
                 <span>2019 &copy;</span> chenxihua, 个人版权所有
@@ -149,6 +180,10 @@
     function closeAdduser(){
         window.parent.location.reload();
     }
+
+    window.onload = function(){
+        history.forward();
+    }
 </script>
 
 <script type="text/javascript">
@@ -168,12 +203,6 @@
                 window.location.href='/common/logout';
             }
         });
-    }
-</script>
-
-<script type="text/javascript">
-    window.onload = function(){
-        history.forward();
     }
 </script>
 

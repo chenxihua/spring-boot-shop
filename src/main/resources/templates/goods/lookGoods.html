@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览二手商品</title>
+
+<link rel="stylesheet" type="text/css" th:href="@{/layui/common/layui/css/layui.css}" media="all">
+<link rel="stylesheet" type="text/css" th:href="@{/layui/common/global.css}" media="all">
+<link rel="stylesheet" type="text/css" th:href="@{/layui/css/adminstyle.css}" media="all">
+
+
+</head>
+<body>
+
+
+<!--<h1 th:utext="'looking '+'for '+'beatuiful '+goods"> 你好测试 </h1>-->
+<div class="layui-layout layui-layout-admin" id="layui_layout">
+
+    <div th:replace="pages/userLogin::topbars"></div>
+
+    <div th:replace="pages/userLogin::sidebars"></div>
+
+    <!-- 右侧主体内容 -->
+    <div class="layui-body" id="larry-body"
+         style="bottom: 0; border-left: solid 2px #2299ee;">
+        <div class="layui-tab layui-tab-card larry-tab-box" id="larry-tab"
+             lay-filter="demo" lay-allowclose="true">
+
+            <div th:replace="pages/userLogin::rollrightbar"></div>
+            <div th:replace="pages/userLogin::rollcenterbar"></div>
+            <div th:replace="pages/userLogin::rolllightbar"></div>
+
+            <div th:replace="pages/userLogin::advantagebars"></div>
+
+            <!-- 放主体内容 -->
+            <div class="layui-tab-content" style="min-height: 150px;">
+                <div class="layui-tab-item layui-show">
+                    <!--<iframe class="larry-iframe" data-id='0'-->
+                    <!--th:src="@{/}"></iframe>-->
+                    <h1 th:utext="'looking '+'for '+'beatuiful '+goods"> 你好测试 </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div th:replace="pages/userLogin::footbars"></div>
+
+</div>
+
+<!-- 加载js文件-->
+<script type="text/javascript" th:src="@{/layui/common/layui/layui.js}"></script>
+<script type="text/javascript" th:src="@{/layui/js/larry.js}"></script>
+<script type="text/javascript" th:src="@{/layui/js/index.js}"></script>
+
+<script>
+    layui.use([ 'layer', 'form', 'element' ], function() {
+        var layer = layui.layer, form = layui.form, element = layui.element
+    });
+
+    function closeAdduser(){
+        window.parent.location.reload();
+    }
+
+    window.onload = function(){
+        history.forward();
+    }
+</script>
+
+<script type="text/javascript">
+    function readyLogout(){
+        layer.open({
+            type : 1,
+            offset : 'auto',
+            skin : "layui-layer-molv",
+            id : 'layer2' ,
+            offset: 'auto',
+            area : [ '280px', '200px' ],
+            content : '<div style="width: 130px;padding: 30px;margin-left: 65px;margin-top: 5px; font-size: 18px;line-height: 22px; font-weight: 300;">确认退出？</div>',
+            btn : ['确定','关闭'],
+            btnAlign : 'c' ,
+            shade : 0.5 ,
+            yes : function() {
+                window.location.href='/common/logout';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
