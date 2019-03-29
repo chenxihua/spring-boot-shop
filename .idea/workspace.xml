@@ -6,284 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4004397-b214-45e1-88fc-513af81d831e" name="Default" comment="新增商品上传页面">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/spring_boot_shop_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/SpringBootShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/SpringBootShopApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/MyWebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/MyWebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/shiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/shiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/SchoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/SchoolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/AdministratorDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CartDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CollectionDap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CollectionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CommentsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CommentsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/DiscussDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/DiscussDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/EssaysDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/EssaysDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/GoodsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ItemsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ItemsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/OrdersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/PartionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/PartionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/PermissionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ProvinceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ProvinceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/RolePermissionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/RolesDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/SchoolDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/SchoolDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Administrator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Cart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Discuss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Discuss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Essays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Essays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Partion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Partion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Province.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/RolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/RolesPermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Roles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/School.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/SchoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/SchoolService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/SchoolSericeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/SchoolSericeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/shiro/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/shiro/UserRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/util/PasswordHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/util/PasswordHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/rate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/layim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/rate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/mymodules/mycarousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/mymodules/step.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/step/step.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods/lookGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods/lookGoods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods/upGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods/upGoods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/userLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/userLogin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/schools.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/schools.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/RedisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/RedisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/SpringBootShopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/SpringBootShopApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="a4004397-b214-45e1-88fc-513af81d831e" name="Default" comment="新增商品上传页面" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -296,44 +19,7 @@
     <favorites_list name="spring-boot-shop" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LogsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LogsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showLogs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/showLogs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showLogs.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/showLogs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -492,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -519,51 +204,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -921,6 +566,7 @@
       <workItem from="1553762979820" duration="281000" />
       <workItem from="1553764613127" duration="651000" />
       <workItem from="1553768349021" duration="67000" />
+      <workItem from="1553840842340" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="已经完成了申请学校，和学生用户注册">
       <created>1542783851127</created>
@@ -993,11 +639,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1037404000" />
+    <option name="totallyTimeSpent" value="1037709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="15" weight="0.25245443" />
@@ -1021,7 +666,7 @@
       <window_info anchor="bottom" id="Spring" order="10" weight="0.32959327" />
       <window_info anchor="bottom" id="CheckStyle" order="16" weight="0.32916668" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32916668" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.53414637" visible="true" weight="0.22922637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.53414637" visible="true" weight="0.23280802" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295129" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -1431,15 +1076,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="969">
           <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/showLogs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+        <state relative-caret-position="328">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
         </state>
       </provider>
     </entry>
