@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>显示角色权限</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body  class="layui-layout-body">
+
+<blockquote class="layui-elem-quote role_search">
+    <div class="layui-inline">
+        <div class="layui-input-inline">
+            <input type="hidden" id="getRolesId" th:value="${roleId}">
+            <select id="permissSelect" class="layui-input" name="typeId" lay-verify="required" lay-search="" lay-filter="schoolSelect">
+                <option value=""></option>
+                <option th:value="${permiss.id}" th:each="permiss:${permissions}" th:text="${permiss.name}"></option>
+            </select>
+        </div>
+        <a class="layui-btn search_btn" onclick="addPer()"><i class="layui-icon layui-icon-search"></i>分配新权限</a>
+    </div>
+
+</blockquote>
+
+<table class="layui-hide" id="category" lay-filter="tools"></table>
+
+<!-- 最后工具栏 -->
+<div class="layui-row" style="text-align:center;height:50px;line-height:50px;">
+    <a class="layui-btn layui-btn-normal" onclick="exitBtn()" style="vertical-align:middle;">退出关闭</a>
+</div>
+
+<script type="text/html" id="tools">
+    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del_Btn">
+        <i class="layui-icon layui-icon-close-fill"></i>移除权限</a>
+</script>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/toPermission.js}"></script>
+
+</body>
+</html>

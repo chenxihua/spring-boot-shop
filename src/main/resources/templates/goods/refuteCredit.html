@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>反驳买家的信用评分</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-container">
+
+    <form class="layui-form" action="" lay-filter="addCredit" id="addCredit">
+
+        <input type="hidden" name="id" th:value="${userCredit.id}"  autocomplete="off" class="layui-input">
+        <input type="hidden" id="publishAddress" name="publishAddress" />
+        <!--  上传附件  -->
+        <div class="layui-upload" style="margin: 16px 110px;">
+            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="test8">
+                <i class="layui-icon layui-icon-picture"></i>  证据照片</button>
+            <button type="button" class="layui-btn layui-btn-sm" id="test9">
+                <i class="layui-icon layui-icon-upload-circle"></i>  确认上传</button>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">具体描述</label>
+            <div class="layui-input-block">
+                <textarea name="publishDescription" lay-verify="required" placeholder="填写具体交易过程描述" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="save_Btn">保存提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">取消重置</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+
+    layui.use(['form', 'layer', 'upload'], function () {
+        var form = layui.form;
+        var layer = layui.layer;
+        var upload = layui.upload;
+        var $ = layui.$;
+
+
+        //选完文件后不自动上传
+        var uploadInst = upload.render({
+            elem: '#test8',
+            url: '/upload/goodsPic',
+            auto: false,
+            accept: 'images',
+            acceptMime: 'image/*',
+            bindAction: '#test9',
+            done: function(data){
+                if (data.code==0){
+                    layer.msg("照片上传成功",{icon:6});
+                    $('#publishAddress').val(data.data);
+                }else if(data.code==101){
+                    layer.msg("图片上传出错; 请重新上传", {icon:5});
+                }else{
+                    layer.msg("文件上传失败，正在重新上传",{icon:5});
+                    uploadInst.upload();
+                }
+            },
+            error: function () {
+                top.layer.msg("服务器上传图片出错了", {icon:5,time:3000});
+            }
+        });
+
+
+        form.on('submit(save_Btn)', function (data) {
+
+            var picVal = $('#publishAddress').val();
+            if (picVal == ''){
+                layer.msg("请上传证据图片，再提交申请", {icon: 5, time:3000});
+            }else{
+
+                layer.confirm('确认反驳买家虚假评分吗？', {icon: 3, title: '提交信用评分'}, function (index) {
+                    layer.close(index);
+
+                    var contextVal = data.field;
+                    $.ajax({
+                        url:'/userCredit/refute_credit',
+                        data:contextVal,
+                        dataType:'json',
+                        type:'post',
+                        success: function (data) {
+                            if (data==0){
+                                // 1：关闭所有弹窗
+                                parent.layer.closeAll();
+                                // 2：提示评价信用成功
+                                parent.layer.msg("请求已提交，正待管理员审核", {icon:6, time:3000});
+                            }else {
+                                layer.msg("提交请求出现未知错误", {icon:5, time:3000});
+                            }
+                        },
+                        error: function () {
+                            layer.msg("服务器出现异常，请检查服务器", {icon:5, time:3000});
+                        }
+                    });
+                });
+            }
+            return false;
+        });
+    });
+
+</script>
+
+</body>
+</html>

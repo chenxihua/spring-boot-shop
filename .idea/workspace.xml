@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="spring-boot-shop:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4004397-b214-45e1-88fc-513af81d831e" name="Default" comment="新增商品上传页面">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/spring_boot_shop_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/SpringBootShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/SpringBootShopApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/MyWebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/MyWebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/shiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/shiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/SchoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/SchoolController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/AdministratorDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CartDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CollectionDap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CollectionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CommentsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/CommentsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/DiscussDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/DiscussDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/EssaysDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/EssaysDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/GoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ItemsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ItemsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/OrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/PartionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/PartionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/PermissionDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ProvinceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/ProvinceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/RolePermissionDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/RolesDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/SchoolDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/SchoolDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Administrator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Collection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Discuss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Discuss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Essays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Essays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Partion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Partion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Province.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/RolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/RolesPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/Roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/SchoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/SchoolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/SchoolSericeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/SchoolSericeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/shiro/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/shiro/UserRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/util/PasswordHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/util/PasswordHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui-v2.3.0/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/layim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/mymodules/mycarousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/lay/mymodules/step.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layui/common/slide/step/step.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods/lookGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods/lookGoods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods/upGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods/upGoods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/userLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/userLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/schools.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/schools.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/RedisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/RedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/SpringBootShopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/SpringBootShopApplicationTests.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="spring-boot-shop" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="LogsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LogsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showLogs.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/showLogs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showLogs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/showLogs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>stati</find>
+      <find>layui</find>
+      <find>na</find>
+      <find>inner-cont2</find>
+      <find>info-list</find>
+      <find>item-box</find>
+      <find>text-box</find>
+      <find>main-nav</find>
+      <find>product-list-box</find>
+      <find>releaseGoods</find>
+      <find>adminRoles</find>
+      <find>totalpublishs</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/totals.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/addAdmins.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/getOrder.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/dao/UserCreditDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/getOrder.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/addNotices.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/GoodsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/userLogin.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/findGoodsInfos.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/userInfos.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/updateInfo.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/updateInfo.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ordersRecord/addComments.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/oneInfo.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/UserCreditService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/gosuncn/shop/ServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/toUserRoles.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/addCredit.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/discussOrders.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/addCredit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/layui/css/creditCss.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/manager/showUserCredit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/goodInfos.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ordersRecord/getOrdersComments.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/refuteCredit.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/CommonController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/conflict.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/showLogs.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/changePassword.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/UserCreditServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lookNotices.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/userLogin.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/userInfos.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/showAdmins.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/showAdmins.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/UserCredit.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/checkCredit.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/adminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/UserCreditController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/checkRefute.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/biz/conflict.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/exception/FileUploadException.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/error/error.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/aop/SysLogAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LogsController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\AssisitTools\maven\repository" />
+        <option name="mavenHome" value="E:/AssisitTools/maven/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="E:\AssisitTools\maven\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="jdk-1.8" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-boot-shop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-boot-shop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="186" />
+    <option name="y" value="19" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <showMembers ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="biz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-boot-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-boot-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="navtab&#9;FILE&#9;file://E:/DevTools/idea/workplaces/spring-boot-shop/src/main/resources/static/layui/js/navtab.js&#10;AdvicF&#9;PSI&#9;JAVA://org.apache.shiro.web.servlet.AdviceFilter&#10;Object&#9;null&#9;null&#10;object&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DevTools\idea\workplaces\spring-boot-shop\src\main\resources\static\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DevTools\idea\workplaces\spring-boot-shop\src\main\java\com\gosuncn\shop\annonation" />
+      <recent name="E:\DevTools\idea\workplaces\spring-boot-shop\src\main\java\com\gosuncn\shop\entities" />
+      <recent name="E:\DevTools\idea\workplaces\spring-boot-shop\src\main\resources\static\layui" />
+      <recent name="E:\DevTools\idea\workplaces\spring-boot-shop\src\main\resources\templates\user" />
+      <recent name="E:\DevTools\idea\workplaces\spring-boot-shop\src\main\resources\static\images\photos" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBootShopApplication">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="OthersTest.testHaha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gosuncn.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gosuncn.shop" />
+      <option name="MAIN_CLASS_NAME" value="com.gosuncn.shop.OthersTest" />
+      <option name="METHOD_NAME" value="testHaha" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="OthersTest.testMath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gosuncn.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gosuncn.shop" />
+      <option name="MAIN_CLASS_NAME" value="com.gosuncn.shop.OthersTest" />
+      <option name="METHOD_NAME" value="testMath" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="OthersTest.testUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gosuncn.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gosuncn.shop" />
+      <option name="MAIN_CLASS_NAME" value="com.gosuncn.shop.OthersTest" />
+      <option name="METHOD_NAME" value="testUrl" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ServiceTest.testCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gosuncn.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gosuncn.shop" />
+      <option name="MAIN_CLASS_NAME" value="com.gosuncn.shop.ServiceTest" />
+      <option name="METHOD_NAME" value="testCredit" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ServiceTest.testServiceCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gosuncn.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gosuncn.shop" />
+      <option name="MAIN_CLASS_NAME" value="com.gosuncn.shop.ServiceTest" />
+      <option name="METHOD_NAME" value="testServiceCredit" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SpringBootShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-shop" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gosuncn.shop.SpringBootShopApplication" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SpringBootShopApplication" />
+      <item itemvalue="JUnit.OthersTest.testMath" />
+      <item itemvalue="JUnit.OthersTest.testUrl" />
+      <item itemvalue="JUnit.OthersTest.testHaha" />
+      <item itemvalue="JUnit.ServiceTest.testCredit" />
+      <item itemvalue="JUnit.ServiceTest.testServiceCredit" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ServiceTest.testServiceCredit" />
+        <item itemvalue="JUnit.ServiceTest.testCredit" />
+        <item itemvalue="JUnit.OthersTest.testHaha" />
+        <item itemvalue="JUnit.OthersTest.testUrl" />
+        <item itemvalue="JUnit.OthersTest.testMath" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4004397-b214-45e1-88fc-513af81d831e" name="Default" comment="" />
+      <created>1542589544302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542589544302</updated>
+      <workItem from="1542589547898" duration="2969000" />
+      <workItem from="1542694820311" duration="11997000" />
+      <workItem from="1542760931294" duration="26164000" />
+      <workItem from="1542847210446" duration="21727000" />
+      <workItem from="1542944821029" duration="2473000" />
+      <workItem from="1543286346458" duration="4563000" />
+      <workItem from="1543297326597" duration="14330000" />
+      <workItem from="1543385830982" duration="2805000" />
+      <workItem from="1543397410881" duration="1694000" />
+      <workItem from="1543472090457" duration="2324000" />
+      <workItem from="1543559562042" duration="4209000" />
+      <workItem from="1543798601715" duration="11877000" />
+      <workItem from="1543884840133" duration="831000" />
+      <workItem from="1543973301260" duration="2206000" />
+      <workItem from="1544058866964" duration="5770000" />
+      <workItem from="1544168814615" duration="3695000" />
+      <workItem from="1545016764769" duration="20048000" />
+      <workItem from="1545094950153" duration="19224000" />
+      <workItem from="1545180930012" duration="6306000" />
+      <workItem from="1545293857881" duration="5604000" />
+      <workItem from="1545353449935" duration="2585000" />
+      <workItem from="1545374373744" duration="2094000" />
+      <workItem from="1545376561103" duration="3291000" />
+      <workItem from="1545380036653" duration="5977000" />
+      <workItem from="1545553880303" duration="599000" />
+      <workItem from="1545612770692" duration="25489000" />
+      <workItem from="1545700976159" duration="25172000" />
+      <workItem from="1545786628489" duration="21220000" />
+      <workItem from="1545823461466" duration="6346000" />
+      <workItem from="1545878433199" duration="3489000" />
+      <workItem from="1545889911003" duration="10027000" />
+      <workItem from="1545959689176" duration="8990000" />
+      <workItem from="1545976595857" duration="11494000" />
+      <workItem from="1546044473875" duration="13671000" />
+      <workItem from="1546074866568" duration="2669000" />
+      <workItem from="1546391625752" duration="357000" />
+      <workItem from="1546582129092" duration="420000" />
+      <workItem from="1546848168756" duration="7564000" />
+      <workItem from="1546908802924" duration="15479000" />
+      <workItem from="1546995506664" duration="20095000" />
+      <workItem from="1547035692666" duration="2804000" />
+      <workItem from="1547103938808" duration="12929000" />
+      <workItem from="1547168554007" duration="1869000" />
+      <workItem from="1547176273792" duration="15773000" />
+      <workItem from="1547437785054" duration="21313000" />
+      <workItem from="1547521754524" duration="13385000" />
+      <workItem from="1547600469586" duration="24198000" />
+      <workItem from="1547685729237" duration="24723000" />
+      <workItem from="1547773397506" duration="22416000" />
+      <workItem from="1547814927260" duration="5100000" />
+      <workItem from="1547859527042" duration="9628000" />
+      <workItem from="1548032277439" duration="20961000" />
+      <workItem from="1548118145968" duration="1330000" />
+      <workItem from="1548295346413" duration="447000" />
+      <workItem from="1548297524825" duration="378000" />
+      <workItem from="1548297941162" duration="1633000" />
+      <workItem from="1548300647971" duration="15233000" />
+      <workItem from="1548322271991" duration="6407000" />
+      <workItem from="1548376833583" duration="8258000" />
+      <workItem from="1548398283484" duration="7382000" />
+      <workItem from="1548654970201" duration="608000" />
+      <workItem from="1548723058749" duration="349000" />
+      <workItem from="1548728842903" duration="1721000" />
+      <workItem from="1548809191163" duration="11771000" />
+      <workItem from="1548897024164" duration="178000" />
+      <workItem from="1549852937508" duration="2550000" />
+      <workItem from="1549867659679" duration="7505000" />
+      <workItem from="1549942862217" duration="13912000" />
+      <workItem from="1550019785418" duration="4647000" />
+      <workItem from="1550045624298" duration="11665000" />
+      <workItem from="1550132671569" duration="3587000" />
+      <workItem from="1550191540649" duration="17586000" />
+      <workItem from="1550218544121" duration="2926000" />
+      <workItem from="1550293297929" duration="2631000" />
+      <workItem from="1550300168357" duration="1801000" />
+      <workItem from="1550302155242" duration="6172000" />
+      <workItem from="1550376782153" duration="16982000" />
+      <workItem from="1550456168841" duration="156000" />
+      <workItem from="1550460173730" duration="4075000" />
+      <workItem from="1550470208283" duration="263000" />
+      <workItem from="1550486690222" duration="6074000" />
+      <workItem from="1550566031225" duration="12296000" />
+      <workItem from="1550623552091" duration="901000" />
+      <workItem from="1550656817871" duration="9889000" />
+      <workItem from="1550717091538" duration="23914000" />
+      <workItem from="1550796573286" duration="13563000" />
+      <workItem from="1550822065882" duration="45000" />
+      <workItem from="1551058928778" duration="10697000" />
+      <workItem from="1551076672053" duration="11015000" />
+      <workItem from="1551142717656" duration="3544000" />
+      <workItem from="1551146627106" duration="12049000" />
+      <workItem from="1551172285942" duration="2796000" />
+      <workItem from="1551227193000" duration="30229000" />
+      <workItem from="1551315008855" duration="24473000" />
+      <workItem from="1551402263173" duration="23929000" />
+      <workItem from="1551661524328" duration="28059000" />
+      <workItem from="1551746433566" duration="16787000" />
+      <workItem from="1551833564371" duration="26973000" />
+      <workItem from="1551920346450" duration="9467000" />
+      <workItem from="1552005811723" duration="1381000" />
+      <workItem from="1552010903583" duration="3055000" />
+      <workItem from="1552201054534" duration="1451000" />
+      <workItem from="1552206195431" duration="9510000" />
+      <workItem from="1552282267944" duration="15775000" />
+      <workItem from="1552351102446" duration="7417000" />
+      <workItem from="1552370925050" duration="57000" />
+      <workItem from="1552386048599" duration="7428000" />
+      <workItem from="1552446831506" duration="22083000" />
+      <workItem from="1552532637450" duration="10803000" />
+      <workItem from="1552556139927" duration="696000" />
+      <workItem from="1553580796818" duration="317000" />
+      <workItem from="1553590080646" duration="291000" />
+      <workItem from="1553592068437" duration="335000" />
+      <workItem from="1553592590844" duration="1762000" />
+      <workItem from="1553648403794" duration="400000" />
+      <workItem from="1553649922911" duration="69000" />
+      <workItem from="1553668085691" duration="685000" />
+      <workItem from="1553678944990" duration="599000" />
+      <workItem from="1553734226940" duration="73000" />
+      <workItem from="1553762195093" duration="422000" />
+      <workItem from="1553762979820" duration="281000" />
+      <workItem from="1553764613127" duration="651000" />
+      <workItem from="1553768349021" duration="67000" />
+    </task>
+    <task id="LOCAL-00001" summary="已经完成了申请学校，和学生用户注册">
+      <created>1542783851127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542783851127</updated>
+    </task>
+    <task id="LOCAL-00002" summary="此次完成第二步提交，完成shiro权限验证测试">
+      <created>1544059291402</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544059291402</updated>
+    </task>
+    <task id="LOCAL-00003" summary="此次完成二手平台登录首页">
+      <created>1545041217834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545041217834</updated>
+    </task>
+    <task id="LOCAL-00004" summary="添加新页面">
+      <created>1545044769257</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545044769257</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新增商品上传页面">
+      <created>1545048702100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1545048702100</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 16h 50m 39s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 16h 52m 03s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 16h 53m 11s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 17h 07m 36s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 17h 09m 48s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 17h 11m 29s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 17h 12m 29s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OthersTest_testHaha - 2019.03.06 at 17h 14m 47s.xml">
+      <configuration name="OthersTest.testHaha" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ServiceTest_testCredit - 2019.03.11 at 16h 00m 47s.xml">
+      <configuration name="ServiceTest.testCredit" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ServiceTest_testServiceCredit - 2019.03.12 at 19h 06m 41s.xml">
+      <configuration name="ServiceTest.testServiceCredit" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1037404000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="15" weight="0.25245443" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32871014" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3295129" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.51944447" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32916668" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32959327" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.675" />
+      <window_info anchor="bottom" id="Spring" order="10" weight="0.32959327" />
+      <window_info anchor="bottom" id="CheckStyle" order="16" weight="0.32916668" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32916668" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.53414637" visible="true" weight="0.22922637" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295129" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" sideWeight="0.46585366" side_tool="true" weight="0.2034384" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="REST Client" order="0" weight="0.4516129" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.21111111" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32916668" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="已经完成了申请学校，和学生用户注册" />
+    <MESSAGE value="此次完成第二步提交，完成shiro权限验证测试" />
+    <MESSAGE value="此次完成二手平台登录首页" />
+    <MESSAGE value="添加新页面" />
+    <MESSAGE value="新增商品上传页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增商品上传页面" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ordersRecord/tradeDescribe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="71" lean-forward="true" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/updateInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/School.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="350" column="74" lean-forward="true" selection-start-line="350" selection-start-column="74" selection-end-line="350" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/historyList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/gosuncn/shop/ServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="173" column="39" lean-forward="true" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/UserCreditService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/updateInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" column="77" lean-forward="true" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/toUserRoles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/addComments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ordersRecord/addComments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/publishList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/goodInfos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/layui/css/creditCss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/discussOrders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="260" column="42" lean-forward="true" selection-start-line="260" selection-start-column="42" selection-end-line="260" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/addCredit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-606">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ordersRecord/getOrdersComments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/upGoods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="46" column="73" lean-forward="true" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/refuteCredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/CommonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="304" column="32" lean-forward="true" selection-start-line="304" selection-start-column="32" selection-end-line="304" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/changePassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/addAdmins.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/showUserCredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lookNotices.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/service/impl/UserCreditServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/addCredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/userLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="65" column="87" lean-forward="true" selection-start-line="65" selection-start-column="87" selection-end-line="65" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/userInfos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/userInfos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/showAdmins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/showAdmins.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="45" column="61" lean-forward="true" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/buyList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="117" column="41" lean-forward="true" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/checkCredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/adminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4161">
+          <caret line="219" column="38" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/entities/UserCredit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/UserCreditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6289">
+          <caret line="356" column="34" selection-start-line="356" selection-start-column="28" selection-end-line="356" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/checkRefute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/conflict.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/conflict.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/oneInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/exception/FileUploadException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/aop/SysLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="79" column="69" selection-start-line="79" selection-start-column="69" selection-end-line="79" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4408">
+          <caret line="257" column="73" selection-start-line="257" selection-start-column="73" selection-end-line="257" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/showLogs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/config/MyWebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gosuncn/shop/controller/LogsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/biz/showLogs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>spring-boot-shop:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>spring-boot-shop</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

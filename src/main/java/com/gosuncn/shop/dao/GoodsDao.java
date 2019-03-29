@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:39
  */
-public interface GoodsDao extends JpaRepository<Goods, Integer>, JpaSpecificationExecutor<Goods>, Serializable {
+public interface GoodsDao extends JpaRepository<Goods, Integer>, JpaSpecificationExecutor<Goods> {
 }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>审核反驳信用积分页面</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link rel="stylesheet" th:href="@{/layui/css/listCss.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<div class="layui-container">
+    <form class="layui-form" action="" lay-filter="addCredit" id="addCredit">
+
+            <div style="width: 100%; ">
+                <span>交易过程是否迟到</span>
+                <input type="radio" name="isLate" value="2" title="提前">
+                <input type="radio" name="isLate" value="1" title="准时">
+                <input type="radio" name="isLate" value="0" title="迟到">
+            </div>
+
+
+            <div style="width: 100%; ">
+                <span>是否符合出售描述</span>
+                <input type="radio" name="isDescription" value="2" title="符合">
+                <input type="radio" name="isDescription" value="1" title="一般">
+                <input type="radio" name="isDescription" value="0" title="不符合">
+            </div>
+
+            <div style="width: 100%; ">
+                <span>交易商品质量好坏</span>
+                <input type="radio" name="isQuality" value="2" title="优质">
+                <input type="radio" name="isQuality" value="1" title="一般">
+                <input type="radio" name="isQuality" value="0" title="次品">
+            </div>
+
+            <div style="width: 100%; ">
+                <span>卖家服务态度是否好</span>
+                <input type="radio" name="isService" value="2" title="友好">
+                <input type="radio" name="isService" value="1" title="一般">
+                <input type="radio" name="isService" value="0" title="不好">
+            </div>
+
+    </form>
+
+    <section class="travel_tang_section2">
+        <div>
+            <img th:src="${credit.buyAddress}" />
+            <p>买家（评分人）： [[ ${buyUser.realName}]]</p>
+            <p>买家描述：[[ ${credit.buyDescription} ]]</p>
+        </div>
+    </section>
+
+    <section class="travel_tang_section2">
+        <div>
+            <img th:src="${credit.publishAddress}" />
+            <p>卖家（反驳人）： [[ ${publisherUser.realName}]]</p>
+            <p>卖家描述：[[ ${credit.publishDescription} ]]</p>
+        </div>
+    </section>
+
+</div>
+
+<div style="text-align: center">
+    <button class="layui-btn layui-btn-normal layui-btn-radius" id="close_btn">确认退出</button>
+</div>
+
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    layui.use(['form','layer', 'util'], function() {
+        var form = layui.form;
+        var layer = layui.layer;
+        var util = layui.util;
+        var $ = layui.$;
+
+        var id = [[${credit.id}]];
+
+        loadRadioSelected();
+
+        function loadRadioSelected(){
+            $.ajax({
+                url:'/userCredit/findOne/'+id,
+                dataType:'json',
+                type:'get',
+                success: function (data) {
+                    if(data.code==0){
+                        var isLate = data.data.isLate;
+                        var isDesc = data.data.isDescription;
+                        var isQua = data.data.isQuality;
+                        var isService = data.data.isService;
+
+                        if (isLate==0){
+                            $("input[name='isLate'][value='0']").attr("checked",true);
+                        }else if (isLate==1){
+                            $("input[name='isLate'][value='1']").attr("checked",true);
+                        }else if(isLate==2){
+                            $("input[name='isLate'][value='2']").attr("checked",true);
+                        }
+
+                        if (isDesc==0){
+                            $("input[name='isDescription'][value='0']").attr("checked",true);
+                        }else if (isDesc==1){
+                            $("input[name='isDescription'][value='1']").attr("checked",true);
+                        }else if(isDesc==2){
+                            $("input[name='isDescription'][value='2']").attr("checked",true);
+                        }
+
+                        if (isQua==0){
+                            $("input[name='isQuality'][value='0']").attr("checked",true);
+                        }else if (isQua==1){
+                            $("input[name='isQuality'][value='1']").attr("checked",true);
+                        }else if(isQua==2){
+                            $("input[name='isQuality'][value='2']").attr("checked",true);
+                        }
+
+                        if (isService==0){
+                            $("input[name='isService'][value='0']").attr("checked",true);
+                        }else if (isService==1){
+                            $("input[name='isService'][value='1']").attr("checked",true);
+                        }else if(isService==2){
+                            $("input[name='isService'][value='2']").attr("checked",true);
+                        }
+                    }
+                    form.render('radio');
+                }
+            });
+        }
+
+        form.on('submit(*)', function(data){
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+
+
+    });
+
+
+</script>
+
+</body>
+</html>

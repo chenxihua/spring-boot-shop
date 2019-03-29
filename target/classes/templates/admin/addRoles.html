@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新增管理角色</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<form class="layui-form" th:object="${roles}" id="categoryFrm" method="post">
+    <input type="hidden" name="id" id="rolesId" th:value="*{id}"/>
+
+    <div class="layui-form-item" style="margin-top: 20px;">
+        <label class="layui-form-label">角色名称：</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" id="rolesName" th:value="*{name}"
+                   style="width: 180px;" placeholder="请输入角色名称" class="layui-input" lay-verify="required">
+        </div>
+    </div>
+    <div class="layui-form-item" style="margin-top: 20px;">
+        <label class="layui-form-label">角色描述：</label>
+        <div class="layui-input-block">
+            <input type="text" name="descript" id="rolesDes" th:value="*{descript}"
+                   style="width: 380px;" placeholder="请输入角色描述" class="layui-input" lay-verify="required">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="*">确认</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/addRoles.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+/**   用于显示单个商品的css样式  */
+.travel_tang_section2{
+    background:#FFF;
+    margin-top:20px;
+}
+.travel_tang_section2 img{
+    width:300px;
+    height:200px;
+    float:left;
+    margin-left:20px;
+    margin-right:20px;
+}
+.travel_tang_section2 div{
+    height:210px;
+    background:#FFF;
+    border-bottom:1px;
+    /*border-bottom-color: ;*/
+    border-bottom-style:solid;
+    margin-top:10px;
+}
+.travel_tang_section2 p{
+    font-size:20px;
+    font-family:Georgia, "Times New Roman", Times, serif;
+}

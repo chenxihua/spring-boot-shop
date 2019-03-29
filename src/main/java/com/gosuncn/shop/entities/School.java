@@ -1,5 +1,6 @@
 package com.gosuncn.shop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.util.Date;
  * @author: chenxihua
  * @Date: 2018-11-14:13:52
  */
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 @Data
 @Table(name = "school")
 @Entity

@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:35
  */
-public interface CommentsDao extends JpaRepository<Comments, Integer>, JpaSpecificationExecutor<Comments>, Serializable {
+public interface CommentsDao extends JpaRepository<Comments, Integer>, JpaSpecificationExecutor<Comments> {
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改个人非敏感信息</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-container">
+    <br>
+    <!--  主题内容  -->
+    <form class="layui-form" action="" lay-filter="example">
+        <input type="hidden" name="id" th:value="${user.id}" />
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系手机</label>
+            <div class="layui-input-inline">
+                <input type="text" name="phone" th:value="${user.phone}" lay-verify="phone" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">微信</label>
+            <div class="layui-input-inline">
+                <input type="text" name="wechat" th:value="${user.wechat}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">QQ</label>
+            <div class="layui-input-inline">
+                <input type="text" name="qq" th:value="${user.qq}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">个性签名</label>
+            <div class="layui-input-block">
+                <input type="text" name="signature" th:value="${user.signature}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系地址</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" th:value="${user.address}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="save_btn">保存提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/updateInfo.js}"></script>
+
+</body>
+</html>

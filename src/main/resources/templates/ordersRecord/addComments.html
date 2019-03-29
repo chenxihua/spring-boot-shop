@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加订单评论</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<div class="layui-container">
+    <br><br>
+    <form class="layui-form" action="" lay-filter="addInfos" id="addInfos">
+        <input type="hidden" name="id"  value="">
+        <input type="hidden" name="ordersId" th:value="${orders.id}">
+        <input type="hidden" name="publishMan" th:value="${goods.publishMan}">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">服务等级</label>
+            <div class="layui-input-inline">
+                <select name="compliance" lay-verify="required">
+                    <option value=""></option>
+                    <option value="1">★</option>
+                    <option value="2">★★</option>
+                    <option value="3">★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="5">★★★★★</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">详细描述</label>
+            <div class="layui-input-block">
+                <textarea name="description" lay-verify="required" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="saveComments">保存提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/addComments.js}"></script>
+
+
+</body>
+</html>

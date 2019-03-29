@@ -7,8 +7,9 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.io.Serializable;
 
 /**
- * @author: chenxihua
- * @Date: 2018-11-14:15:42
- */
-public interface PermissionDao extends JpaRepository<Permission, Integer>, JpaSpecificationExecutor<Permission>, Serializable {
+ * @Author: chenxihua
+ * @Date: 2019/1/25:15:01
+ * @Version 1.0
+ **/
+public interface PermissionDao extends JpaRepository<Permission, Integer>, JpaSpecificationExecutor<Permission> {
 }

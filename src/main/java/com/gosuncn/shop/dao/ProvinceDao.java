@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:43
  */
-public interface ProvinceDao extends JpaRepository<Province, Integer>, JpaSpecificationExecutor<Province>, Serializable {
+public interface ProvinceDao extends JpaRepository<Province, Integer>, JpaSpecificationExecutor<Province> {
 }

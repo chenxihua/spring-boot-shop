@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加审核描述</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<br>
+<form class="layui-form" action="" lay-filter="addDescrible" id="addDescrible">
+
+    <input type="hidden" name="id" th:value="${schoolId}"  autocomplete="off" class="layui-input">
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">审核意见描述</label>
+        <div class="layui-input-block">
+            <textarea name="description" lay-verify="required" placeholder="填写具体审核意见" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="save_yes">审核通过</button>
+            <button class="layui-btn layui-btn-danger" lay-submit lay-filter="save_no">审核失败</button>
+            <button type="reset" class="layui-btn layui-btn-primary">取消重置</button>
+        </div>
+    </div>
+</form>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/addCheckResult.js}"></script>
+
+
+</body>
+</html>

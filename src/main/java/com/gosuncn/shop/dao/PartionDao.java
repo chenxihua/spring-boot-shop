@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:41
  */
-public interface PartionDao extends JpaRepository<Partion, Integer>, JpaSpecificationExecutor<Partion>, Serializable {
+public interface PartionDao extends JpaRepository<Partion, Integer>, JpaSpecificationExecutor<Partion> {
 }

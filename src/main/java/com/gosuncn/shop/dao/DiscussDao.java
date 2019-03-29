@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:37
  */
-public interface DiscussDao extends JpaRepository<Discuss, Integer>, JpaSpecificationExecutor<Discuss>, Serializable {
+public interface DiscussDao extends JpaRepository<Discuss, Integer>, JpaSpecificationExecutor<Discuss> {
 }

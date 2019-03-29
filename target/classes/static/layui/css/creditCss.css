@@ -1,0 +1,29 @@
+ #credit_show{
+     background-color: #eaeaea;
+     /*background-color: #e8e8e8;*/
+     margin: 5px 10px;
+     padding: 5px 5px;
+ }
+
+ #credit_show p{
+     font-size: 18px;
+     margin: auto 10px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+ }
+
+
+ .two_id{
+     font-size: 20px;
+     color: #009f95;
+ }
+
+ .one_id{
+     font-size: 20px;
+     color: #40AFFE;
+ }
+
+ .zero_id{
+     font-size: 20px;
+     color: red;
+ }

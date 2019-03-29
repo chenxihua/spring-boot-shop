@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>评价卖家信用</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<div class="layui-container">
+    <form class="layui-form" action="" lay-filter="addCredit" id="addCredit">
+
+        <input type="hidden" name="id" value=""  autocomplete="off" class="layui-input">
+        <input type="hidden" name="publishUser" th:value="${publishId}" autocomplete="off" class="layui-input">
+        <input type="hidden" name="orderId" th:value="${orderId}" autocomplete="off" class="layui-input">
+        <input type="hidden" name="buyUser" th:value="${buyId}" autocomplete="off" class="layui-input">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">交易过程是否迟到</label>
+            <input type="radio" name="isLate" value="2" title="提前" checked>
+            <input type="radio" name="isLate" value="1" title="准时">
+            <input type="radio" name="isLate" value="0" title="迟到">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否符合出售描述</label>
+            <input type="radio" name="isDescription" value="2" title="符合" checked>
+            <input type="radio" name="isDescription" value="1" title="一般">
+            <input type="radio" name="isDescription" value="0" title="不符合">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">交易商品质量好坏</label>
+            <input type="radio" name="isQuality" value="2" title="优质" checked>
+            <input type="radio" name="isQuality" value="1" title="一般">
+            <input type="radio" name="isQuality" value="0" title="次品">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">卖家服务态度是否好</label>
+            <input type="radio" name="isService" value="2" title="友好" checked>
+            <input type="radio" name="isService" value="1" title="一般">
+            <input type="radio" name="isService" value="0" title="不好">
+        </div>
+
+        <input type="hidden" id="buyAddress" name="buyAddress" />
+        <!--  上传附件  -->
+        <div class="layui-upload" style="margin: 16px 110px;">
+            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="test8">
+                <i class="layui-icon layui-icon-picture"></i>  证据照片</button>
+            <button type="button" class="layui-btn layui-btn-sm" id="test9">
+                <i class="layui-icon layui-icon-upload-circle"></i>  确认上传</button>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">具体描述</label>
+            <div class="layui-input-block">
+                <textarea name="buyDescription" placeholder="填写具体交易过程描述" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="save_Btn">保存提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">取消重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/addCredit.js}"></script>
+
+
+</body>
+</html>

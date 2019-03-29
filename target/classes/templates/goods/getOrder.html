@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>下订二手商品</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<br>
+<form class="layui-form" action="" lay-filter="addOrder" id="addOrder">
+
+    <input type="hidden" name="id" value=""  autocomplete="off" class="layui-input">
+    <input type="hidden" name="goodsId" th:value="${goodValId}" autocomplete="off" class="layui-input">
+
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">交易地址描述</label>
+
+        <div class="layui-input-block">
+            <textarea name="details" lay-verify="required" placeholder="填写具体交易地址信息" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="saveOrderBtn">保存提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">取消重置</button>
+        </div>
+    </div>
+</form>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/getOrder.js}"></script>
+
+
+
+</body>
+</html>

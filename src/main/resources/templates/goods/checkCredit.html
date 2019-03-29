@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查看本次交易信用积分</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-container">
+    <form class="layui-form" action="" lay-filter="addCredit" id="addCredit">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">交易过程是否迟到</label>
+            <input type="radio" name="isLate" value="2" title="提前">
+            <input type="radio" name="isLate" value="1" title="准时">
+            <input type="radio" name="isLate" value="0" title="迟到">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否符合出售描述</label>
+            <input type="radio" name="isDescription" value="2" title="符合">
+            <input type="radio" name="isDescription" value="1" title="一般">
+            <input type="radio" name="isDescription" value="0" title="不符合">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">交易商品质量好坏</label>
+            <input type="radio" name="isQuality" value="2" title="优质">
+            <input type="radio" name="isQuality" value="1" title="一般">
+            <input type="radio" name="isQuality" value="0" title="次品">
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">卖家服务态度是否好</label>
+            <input type="radio" name="isService" value="2" title="友好">
+            <input type="radio" name="isService" value="1" title="一般">
+            <input type="radio" name="isService" value="0" title="不好">
+        </div>
+    </form>
+</div>
+
+<div style="text-align: center">
+    <button class="layui-btn layui-btn-normal layui-btn-radius" id="close_btn">确认退出</button>
+    <button class="layui-btn layui-btn-danger layui-btn-radius" id="disprove_btn">反驳此次买家虚假评分</button>
+</div>
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    layui.use(['form','layer', 'util'], function() {
+        var form = layui.form;
+        var layer = layui.layer;
+        var util = layui.util;
+        var $ = layui.$;
+
+        var id = [[${userCredit.id}]];
+
+        loadRadioSelected();
+
+        function loadRadioSelected(){
+            $.ajax({
+                url:'/userCredit/findOne/'+id,
+                dataType:'json',
+                type:'get',
+                success: function (data) {
+                    if(data.code==0){
+                        var isLate = data.data.isLate;
+                        var isDesc = data.data.isDescription;
+                        var isQua = data.data.isQuality;
+                        var isService = data.data.isService;
+
+                        if (isLate==0){
+                            $("input[name='isLate'][value='0']").attr("checked",true);
+                        }else if (isLate==1){
+                            $("input[name='isLate'][value='1']").attr("checked",true);
+                        }else if(isLate==2){
+                            $("input[name='isLate'][value='2']").attr("checked",true);
+                        }
+
+                        if (isDesc==0){
+                            $("input[name='isDescription'][value='0']").attr("checked",true);
+                        }else if (isDesc==1){
+                            $("input[name='isDescription'][value='1']").attr("checked",true);
+                        }else if(isDesc==2){
+                            $("input[name='isDescription'][value='2']").attr("checked",true);
+                        }
+
+                        if (isQua==0){
+                            $("input[name='isQuality'][value='0']").attr("checked",true);
+                        }else if (isQua==1){
+                            $("input[name='isQuality'][value='1']").attr("checked",true);
+                        }else if(isQua==2){
+                            $("input[name='isQuality'][value='2']").attr("checked",true);
+                        }
+
+                        if (isService==0){
+                            $("input[name='isService'][value='0']").attr("checked",true);
+                        }else if (isService==1){
+                            $("input[name='isService'][value='1']").attr("checked",true);
+                        }else if(isService==2){
+                            $("input[name='isService'][value='2']").attr("checked",true);
+                        }
+                    }
+                    form.render('radio');
+                }
+            });
+        }
+
+        form.on('submit(*)', function(data){
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+        // 关闭所有弹窗
+        $('#close_btn').click(function () {
+            parent.layer.closeAll();
+        });
+
+        // 反驳买家虚假评分
+        $('#disprove_btn').click(function () {
+            layer.confirm('确定反驳此次买家虚假评分？如果审核无误，此次买家评分依然生效', {icon: 3, title: '反驳请求'}, function (index) {
+                layer.close(index);
+                layer.open({
+                    type:2,
+                    title: '<p style="text-align: center;">反驳虚假信用评分</p>',
+                    closeBtn: 1,
+                    area: ['500px', '300px'],
+                    shadeClose: false,
+                    content: '/userCredit/refute_info/'+id,  // 因为订单也是唯一的。
+                });
+            });
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

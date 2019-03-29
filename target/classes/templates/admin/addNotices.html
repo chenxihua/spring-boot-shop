@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新增公告页面</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<form class="layui-form" id="categoryFrm" method="post">
+
+    <input type="hidden" name="id" />
+    <input type="hidden" id="fileAddress" name="fileUrl" />
+
+    <div class="layui-form-item" style="margin-top: 20px;">
+        <label class="layui-form-label">公告标题</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" style="width: 180px;" placeholder="标题" class="layui-input" lay-verify="required">
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">公告内容</label>
+        <div class="layui-input-block">
+            <textarea name="contents" lay-verify="required" placeholder="填写公告内容" class="layui-textarea"></textarea>
+        </div>
+    </div>
+
+    <!--  上传附件  -->
+    <div class="layui-upload" style="margin: 16px 110px;">
+        <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="test8">
+            <i class="layui-icon layui-icon-picture"></i>  上传附件</button>
+        <button type="button" class="layui-btn layui-btn-sm" id="test9">
+            <i class="layui-icon layui-icon-upload-circle"></i>  确认上传</button>
+    </div>
+
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="*">确认</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/addNotices.js}"></script>
+
+</body>
+</html>

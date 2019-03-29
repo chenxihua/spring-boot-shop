@@ -24,17 +24,14 @@ public class PasswordHelper {
      * 这个方法是设置MD5加密后，得到新密码的方法
      * @param password
      */
-    public static User encryptPassword(String password){
-        User user = new User();
-        String saltString = UUID.randomUUID().toString().substring(0, 8);
+    public static String encryptPassword(String password, String userEmail){
+        String newPassword = null;
         if (!StringUtils.isBlank(password) && !StringUtils.isEmpty(password)){
-            String newPassword = new SimpleHash(algorithmName, password, ByteSource.Util.bytes(saltString),
+            newPassword = new SimpleHash(algorithmName, password, ByteSource.Util.bytes(userEmail),
                     hashIterations).toHex();
-            user.setPassword(newPassword);
-            user.setSalt(saltString);
-            return user;
+            return newPassword;
         }else{
-            return null;
+            return newPassword;
         }
     }
 

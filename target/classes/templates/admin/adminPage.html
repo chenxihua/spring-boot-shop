@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理人员</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+
+    <div th:replace="pages/userLogin::shopTopBar"></div>
+    <div th:replace="pages/userLogin::shopLightBar"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 20px; background-color: #F2F2F2;">
+            <div class="layui-row layui-col-space15">
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header" style="font-size: 20px; background-color: #c9c9c9;"><p style="text-align: center;">管理后台用户页面</p></div>
+                        <div class="layui-card-body">
+
+                            <!--  主题内容  -->
+                            <blockquote class="layui-elem-quote role_search">
+                                <div class="layui-inline">
+                                    <div class="layui-input-inline">
+                                        <input id="keyword" type="text" value="" placeholder="请输入用户名称" class="layui-input search_input">
+                                    </div>
+                                    <a class="layui-btn search_btn" onclick="query()"><i class="layui-icon layui-icon-search"></i>查  询</a>
+                                </div>
+                                <div class="layui-inline">
+                                    <a class="layui-btn layui-btn-normal newsAdd_btn" onclick="openDialog()">
+                                        <i class="layui-icon layui-icon-add-circle-fine"></i>新增管理员</a>
+                                </div>
+                            </blockquote>
+
+                            <table class="layui-hide" id="category" lay-filter="tools"></table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div th:replace="pages/userLogin::shopFootBar"></div>
+</div>
+
+
+<script type="text/html" id="tools">
+    {{# if(d.status===1){ }}
+    <a class="layui-btn layui-btn-xs layui-btn-success" lay-event="update_Btn">
+        <i class="layui-icon layui-icon-search"></i>分配角色</a>
+    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del_Btn">
+        <i class="layui-icon layui-icon-close-fill"></i>删除用户</a>
+    {{# }else if(d.status===2){ }}
+
+    {{# } }}
+</script>
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/adminPage.js}"></script>
+
+<script type="text/javascript">
+    function readyLogout(){
+        layer.confirm('即将退出系统，要继续吗？', function (index) {
+            window.location.href='/common/logout';
+        });
+    }
+</script>
+
+
+</body>
+</html>

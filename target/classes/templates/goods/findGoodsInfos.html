@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查看收藏商品信息</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link rel="stylesheet" th:href="@{/layui/css/shopStyle.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<section class="ab">
+    <ul id="photoSection">
+        <li><div class="col-md-6"><a href="#"><img id="imgUrl" src="" class="steal" /></a></div></li>
+    </ul>
+</section>
+
+<form class="layui-form" action="" lay-filter="lookGoodInfos" id="lookGoodInfos">
+    <input type="hidden" id="goodId" name="id" >
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">发布人</label>
+        <div class="layui-input-inline">
+            <input type="text" name="publishMan" disabled="true" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">商品码</label>
+            <div class="layui-input-inline">
+                <input type="text" name="goodCode" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">商品名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="name" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">出售原价</label>
+            <div class="layui-input-inline">
+                <input type="text" name="originalPrice" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">出售价</label>
+            <div class="layui-input-inline">
+                <input type="text" name="price" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">几成新</label>
+            <div class="layui-input-inline">
+                <input type="text" name="available" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">发布时间</label>
+            <div class="layui-input-inline">
+                <input type="text" name="publishTime" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">联系电话</label>
+            <div class="layui-input-inline">
+                <input type="text" name="phone" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">联系微信</label>
+            <div class="layui-input-inline">
+                <input type="text" name="wechat" disabled="true" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">详细描述</label>
+        <div class="layui-input-block">
+            <input type="text" name="description" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+</form>
+
+
+<div style="text-align: center">
+    <a class="layui-btn layui-btn-normal layui-btn-radius" onclick="close_Open()">查看完毕</a>
+</div>
+
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    layui.use(['form','layer', 'util'], function(){
+        var form = layui.form;
+        var layer = layui.layer;
+        var util = layui.util;
+        var $ = layui.$;
+
+        var goodsId = [[ ${goodsInfos.id} ]];
+
+        loadGoodsInfos();
+
+        function loadGoodsInfos() {
+            $.ajax({
+                url:'/goods/findById/'+goodsId,
+                type:'get',
+                dataType:'json',
+                async:'false',
+                success: function (data) {
+                    if (data.code==0){
+                        // 获取发布人id，赋值给publishMan;
+                        // publishMan = data.dataUser.id;
+
+                        $('#imgUrl').attr('src', data.data.oneAddress);
+                        form.val('lookGoodInfos', {
+                            "id":data.data.id,
+                            "goodCode":data.data.goodCode,
+                            "name":data.data.name,
+                            "originalPrice":data.data.originalPrice,
+                            "price":data.data.price,
+                            "available":data.data.available,
+                            "publishMan":data.dataUser.account,
+                            "publishTime":util.toDateString(data.data.publishTime, 'yyyy-MM-dd HH:mm:ss'),
+                            "wechat":data.data.wechat,
+                            "phone":data.data.phone,
+                            "description":data.data.description,
+                        });
+                        // 表单重新渲染
+                        form.render();
+                    } else {
+                        layer.alert("查询出错了，请检查服务器");
+                    }
+                },
+                error: function () {
+                    layer.alert("发生异常，请检查服务器再操作");
+                }
+            });
+        }
+    });
+
+
+    // 关闭弹窗
+    var close_Open = function () {
+        parent.layer.closeAll();
+    }
+</script>
+
+</body>
+</html>

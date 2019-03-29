@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:38
  */
-public interface EssaysDao extends JpaRepository<Essays, Integer>, JpaSpecificationExecutor<Essays>, Serializable {
+public interface EssaysDao extends JpaRepository<Essays, Integer>, JpaSpecificationExecutor<Essays> {
 }

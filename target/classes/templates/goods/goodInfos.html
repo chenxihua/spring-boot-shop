@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>二手商品详细信息</title>
+
+<link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+<link rel="stylesheet" th:href="@{/layui/css/shopStyle.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<div class="layui-layout layui-layout-admin">
+
+    <div th:replace="pages/userLogin::shopTopBar"></div>
+    <div th:replace="pages/userLogin::shopLightBar"></div>
+
+    <div class="layui-body">
+
+        <!-- 样式布局主体区域 -->
+        <div style="padding: 20px; background-color: #F2F2F2;">
+            <div class="layui-row layui-col-space15">
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header" style="font-size: 20px; background-color: #c9c9c9;"><p style="text-align: center;">二手商品具体信息页面</p></div>
+                        <div class="layui-card-body">
+
+                            <!--  主题内容  -->
+                            <section class="ab">
+                                <ul id="photoSection">
+                                    <li><div class="col-md-6"><a href="#"><img id="imgUrl" src="" class="steal" /></a></div></li>
+                                </ul>
+                            </section>
+
+                            <form class="layui-form" action="" lay-filter="lookGoodInfos" id="lookGoodInfos">
+                                <input type="hidden" id="goodId" name="id">
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">发布人</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="publishMan" disabled="true" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <a class="layui-btn layui-btn-normal layui-btn-radius" id="credit_btn">查看该用户信用</a>
+                                    <a class="layui-btn layui-btn-normal layui-btn-radius" id="history_btn">查看该用户历史发布二手商品</a>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品码</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="goodCode" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品名称</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="name" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">发布的学校</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="schoolId" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">出售原价</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="originalPrice" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">出售价</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="price" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">发布时间</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="publishTime" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">几成新</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="available" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">联系电话</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="phone" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">联系微信</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="wechat" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item layui-form-text">
+                                    <label class="layui-form-label">详细描述</label>
+                                    <div class="layui-input-block">
+                                        <textarea name="description" class="layui-textarea"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- 最后工具栏 -->
+                            <div class="layui-row" style="text-align:center;height:50px;line-height:50px;">
+                                <button class="layui-btn layui-btn-success" id="returnRrePgae" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-return"></i> 返回上页</button>
+                                <button class="layui-btn layui-btn-success" id="collect_btn" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-add-1"></i>收藏商品</button>
+                                <button class="layui-btn layui-btn-success" id="buy_btn" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-cart"></i>点击购买</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div th:replace="pages/userLogin::shopFootBar"></div>
+
+</div>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    layui.use([ 'layer', 'element','form','util'], function() {
+        var layer = layui.layer;
+        var element = layui.element;
+        var form = layui.form;
+        var util = layui.util;
+        var $ = layui.$;
+
+        var userId = [[${session.currentUser.id}]];
+        var goodsId = [[ ${goodInfo.id} ]];
+        loadGoodInfos();
+
+        var publishMan;
+
+        function loadGoodInfos() {
+            $.ajax({
+                url:'/goods/findById/'+goodsId,
+                type:'get',
+                dataType:'json',
+                async:'false',
+                success: function (data) {
+                    if (data.code==0){
+                        // 获取发布人id，赋值给publishMan;
+                        publishMan = data.dataUser.id;
+
+                        $('#imgUrl').attr('src', data.data.oneAddress);
+                        form.val('lookGoodInfos', {
+                            "id":data.data.id,
+                            "goodCode":data.data.goodCode,
+                            "name":data.data.name,
+                            "schoolId":data.dataSchool.fullName,
+                            "originalPrice":data.data.originalPrice,
+                            "price":data.data.price,
+                            "available":data.data.available,
+                            "publishMan":data.dataUser.account,
+                            "publishTime":util.toDateString(data.data.publishTime, 'yyyy-MM-dd HH:mm:ss'),
+                            "wechat":data.data.wechat,
+                            "phone":data.data.phone,
+                            "description":data.data.description,
+                        });
+                        // 表单重新渲染
+                        form.render();
+                    } else {
+                        layer.alert("查询出错了，请检查服务器");
+                    }
+                },
+                error: function () {
+                    layer.alert("发生异常，请检查服务器再操作");
+                }
+            });
+        }
+
+        // 点击返回事件(返回历史窗口)
+        $("#returnRrePgae").click(function(){
+            window.history.back(-1);
+        });
+
+        // 点击收藏商品
+        $('#collect_btn').click(function () {
+            if (userId==publishMan){
+                layer.alert("错误操作，无法收藏自己发布的商品");
+            }else{
+                layer.confirm('确定要收藏此商品吗？', function (index) {
+                    $.ajax({
+                        url: '/collect/saveCollRecord/'+goodsId,
+                        dataType: 'json',
+                        type: 'POST',
+                        success: function (data) {
+                            layer.closeAll(); //疯狂模式，关闭所有层
+                            $('#collect_btn').prop('disabled', true);
+                            $('#collect_btn').attr('class', 'layui-btn layui-btn-disabled');
+                            if(data==0){
+                                top.layer.msg("收藏成功，请继续浏览",{icon: 6}, {time:3000});
+                            }else{
+                                top.layer.msg("收藏失败，请重新操作",{icon: 5}, {time:3000});
+                            }
+                        },
+                        error: function () {
+                            layer.alert("系统服务出异常了，请检查服务器后再操作！");
+                        }
+                    });
+                });
+            }
+        });
+
+        // 点击购买二手商品
+        $('#buy_btn').click(function () {
+            if (userId==publishMan){
+                layer.alert("错误操作，无法购买自己发布的商品");
+            }else {
+                $.ajax({
+                    url:'/goods/findById/'+goodsId,
+                    type:'GET',
+                    dataType:'json',
+                    success:function (data) {
+                        var status = data.data.status;
+                        if(status==2){
+                            layer.open({
+                                type:2,
+                                title: '购买商品',
+                                closeBtn: 1,
+                                area: ['700px', '300px'],
+                                shadeClose: false,
+                                content: '/common/saveOrderById/'+goodsId,
+                                success: function () {
+                                    $('#buy_btn').prop('disabled', true);
+                                    $('#buy_btn').attr('class', 'layui-btn layui-btn-disabled');
+                                }
+                            });
+                        }else if(status==3){
+                            layer.alert("此二手商品已经被人下定了，请求失败");
+                        }else if(status==4){
+                            layer.alert("此二手商品已经下架，请求失败");
+                        }else{
+                            layer.alert("商品状态异常，操作失败");
+                        }
+                    },
+                    error:function () {
+                        layer.alert("服务器出错了，请检查网络后再操作吧");
+                    }
+                });
+            }
+        });
+
+        // 点击查看用户历史发布  history_btn   credit_btn
+        $('#history_btn').click(function () {
+            if (userId==publishMan){
+                layer.msg("查看自己的历史发布，请到商品信息管理处", {icon:5, time: 3000});
+            }else {
+                layer.open({
+                    type:2,
+                    title: '<p style="color: #009688; font-size: 20px; text-align: center;">用户历史发布二手商品</p>',
+                    closeBtn: 1,
+                    area: ['700px', '550px'],
+                    shadeClose: false,
+                    content: '/goods/show_history/'+publishMan,
+                });
+            }
+        });
+
+        // 点击查看用户信用分
+        $('#credit_btn').click(function () {
+            if (userId==publishMan){
+                layer.msg("查看自己的信用积分，请到个人信息处", {icon:5, time: 3000});
+            }else {
+                layer.open({
+                    type:2,
+                    title: '<p style="color: #009688; font-size: 20px; text-align: center;">查看用户信用积分</p>',
+                    closeBtn: 1,
+                    area: ['520px', '310px'],
+                    shadeClose: false,
+                    content: '/userCredit/show_credit/'+publishMan,
+                });
+            }
+
+        });
+
+    });
+
+
+
+</script>
+
+<script type="text/javascript">
+    function readyLogout(){
+        layer.confirm('即将退出系统，要继续吗？', function (index) {
+            window.location.href='/common/logout';
+        });
+    }
+</script>
+
+
+</body>
+</html>

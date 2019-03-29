@@ -8,6 +8,7 @@ import com.gosuncn.shop.entities.User;
 import com.gosuncn.shop.service.ProvinceService;
 import com.gosuncn.shop.service.SchoolService;
 import com.gosuncn.shop.service.UserService;
+import com.gosuncn.shop.util.FileHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.crypto.hash.SimpleHash;
@@ -21,10 +22,11 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.io.File;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.regex.Pattern;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -120,20 +122,57 @@ public class SpringBootShopApplicationTests {
         log.info("---> : " + userService.findByConditionsToUser("chenxihua@qq.com"));
     }
 
-
-
     @Test
     public void contextLoads() {
-
         String url = "hsoanaelaef";
         String ahah = StringUtils.reverse(url);
         log.info("--->" + ahah);
 
-        //User user = new User(null, "aaa", null, "aaa@qq.com", );
-//        List<School> schools = schoolDao.findAll();
-//        for (School school : schools) {
-//            System.out.println(school);
-//        }
+    }
+
+//    public static boolean isNumeric(String string){
+//        Pattern pattern = Pattern.compile("[1-9][0-9]*");
+//        return pattern.matcher(string).matches();
+//    }
+    public static boolean isNumeric(String str){
+        if(str.charAt(0)==48){
+            return false;
+        }
+        for(int i=str.length();--i>=0;){
+            int chr=str.charAt(i);
+            if(chr<48 || chr>57)
+                return false;
+        }
+        return true;
+    }
+    @Test
+    public void testNum(){
+        log.info("--->:" + isNumeric("110"));
+    }
+
+
+    @Test
+    public void testUploads(){
+        URL url = FileHelper.uploads(new File("F:\\shoppic\\aa1.png"));
+        String sss = url.toString();
+        log.info(" url: ---> " + sss );
+    }
+
+
+    @Test
+    public void testSchoolForAll(){
+        List<School> allSchoolInfos = schoolService.findAllSchoolInfos();
+        for (School allSchoolInfo : allSchoolInfos) {
+            log.info("----> " + allSchoolInfo.getName() + " : " + allSchoolInfo.getFullName());
+        }
+    }
+
+    @Test
+    public void testDateLocal(){
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = dateFormat.format(date);
+        log.info("time: --> " + format);
     }
 
 }

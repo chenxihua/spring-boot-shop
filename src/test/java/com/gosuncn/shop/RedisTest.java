@@ -21,18 +21,26 @@ public class RedisTest {
      * 用于测试redis实例
      */
 
-    @Autowired
-    RedisTemplate redisTemplate;
+//    @Autowired
+//    RedisTemplate redisTemplate;
+//
+//    @Test
+//    public void testRedisOne(){
+//        redisTemplate.opsForValue().set("gasun","zhong");
+//        log.info("--->" + redisTemplate.toString());
+//    }
+//
+//    @Test
+//    public void testDele(){
+//        redisTemplate.delete("test:set");
+//        log.info("--->: 删除完毕.");
+//    }
+//
+//    @Test
+//    public void testDateFor(){
+//        // 1545633665923
+//        long currentDate = System.currentTimeMillis();
+//        log.info("----> " + currentDate);
+//    }
 
-    @Test
-    public void testRedisOne(){
-        redisTemplate.opsForValue().set("gasun","zhong");
-        log.info("--->" + redisTemplate.toString());
-    }
-
-    @Test
-    public void testDele(){
-        redisTemplate.delete("test:set");
-        log.info("--->: 删除完毕.");
-    }
 }

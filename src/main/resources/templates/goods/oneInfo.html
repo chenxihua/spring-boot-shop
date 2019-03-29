@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>单个商品信息</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link rel="stylesheet" th:href="@{/layui/css/listCss.css}">
+
+</head>
+<body class="layui-layout-body">
+
+
+<section class="travel_tang_section2">
+    <div>
+        <img th:src="${goodInfo.oneAddress}" />
+        <p>商品码： [[ ${goodInfo.goodCode}]]</p>
+        <p>商品名称：[[ ${goodInfo.name} ]]</p>
+        <p>发布学校： [[ ${school.fullName}]]</p>
+        <p>商品原价：[[ ${goodInfo.originalPrice} ]]</p>
+        <p>出售价格：[[ ${goodInfo.price} ]]</p>
+        <p>详细描述：[[ ${goodInfo.description} ]]</p>
+    </div>
+</section>
+<br><br>
+<div style="text-align: center;">
+    <a class="layui-btn layui-btn-normal layui-btn-radius" style="text-align: center; font-size: 20px; " onclick="closeDis()">关闭退出</a>
+</div>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    // 关闭弹出层
+    var closeDis = function () {
+        parent.layer.closeAll();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>审核商品信息</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link rel="stylesheet" th:href="@{/layui/css/shopStyle.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+
+    <div th:replace="pages/userLogin::shopTopBar"></div>
+    <div th:replace="pages/userLogin::shopLightBar"></div>
+
+    <div class="layui-body">
+        <!-- 样式布局主体区域 -->
+        <div style="padding: 20px; background-color: #F2F2F2;">
+            <div class="layui-row layui-col-space15">
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header" style="font-size: 20px; background-color: #c9c9c9;"><p style="text-align: center;">审核商品信息页面</p></div>
+                        <div class="layui-card-body">
+
+                            <!--  主题内容  -->
+                            <section class="ab">
+                                <ul id="photoSection">
+                                    <li><div class="col-md-6"><a href="#"><img th:src="${goodInfo.oneAddress}" class="steal" /></a></div></li>
+                                </ul>
+                            </section>
+
+                            <form class="layui-form" action="" lay-filter="lookGoodInfos" id="lookGoodInfos">
+                                <input type="hidden" id="goodId" th:value="${goodInfo.id}">
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品名称</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" th:value="${goodInfo.name}" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">出售价</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" th:value="${goodInfo.price}" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">联系电话</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" th:value="${goodInfo.phone}" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">联系微信</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" th:value="${goodInfo.wechat}" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item layui-form-text">
+                                    <label class="layui-form-label">详细描述</label>
+                                    <div class="layui-input-block">
+                                        <textarea disabled="true" class="layui-textarea">[[ ${goodInfo.description} ]]</textarea>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- 最后工具栏 -->
+                            <div class="layui-row" style="text-align:center;height:50px;line-height:50px;">
+                                <button class="layui-btn layui-btn-success" id="returnRrePgae" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-return"></i> 返回上页</button>
+                                <button class="layui-btn layui-btn-normal" id="yes_btn" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-add-1"></i>审核通过</button>
+                                <button class="layui-btn layui-btn-danger" id="no_btn" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-cart"></i>禁止通过</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div th:replace="pages/userLogin::shopFootBar"></div>
+
+</div>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script th:src="@{/biz/checkGoodsInfo.js}"></script>
+
+
+<script type="text/javascript">
+    function readyLogout(){
+        layer.confirm('即将退出系统，要继续吗？', function (index) {
+            window.location.href='/common/logout';
+        });
+    }
+</script>
+
+</body>
+</html>

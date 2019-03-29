@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>评价交易订单</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link rel="stylesheet" th:href="@{/layui/css/shopStyle.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+
+    <div th:replace="pages/userLogin::shopTopBar"></div>
+    <div th:replace="pages/userLogin::shopLightBar"></div>
+
+    <div class="layui-body">
+        <!-- 样式布局主体区域 -->
+        <div style="padding: 20px; background-color: #F2F2F2;">
+            <div class="layui-row layui-col-space15">
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header" style="font-size: 20px; background-color: #c9c9c9;"><p style="text-align: center;">添加订单评论页面</p></div>
+                        <div class="layui-card-body">
+
+                            <!--  主题内容  -->
+                            <section class="ab">
+                                <ul id="photoSection">
+                                    <li><div class="col-md-6"><a href="#"><img id="imgUrl" src="" class="steal" /></a></div></li>
+                                </ul>
+                            </section>
+
+                            <form class="layui-form" action="" lay-filter="lookGoodInfos" id="lookGoodInfos">
+                                <input type="hidden" id="goodId" name="id" >
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">发布人</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="publishMan" disabled="true" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品编码</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="goodCode" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品名称</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="name" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">发布学校</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="schoolId" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">几成新</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="available" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品原价</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="originalPrice" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">出售价格</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="price" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">发布时间</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="publishTime" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">联系电话</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="phone" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">联系微信</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="wechat" disabled="true" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="layui-form-item layui-form-text">
+                                    <label class="layui-form-label">详细描述</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="description" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- 加上评加表格 -->
+                            <table class="layui-table" id="discuss_table" lay-filter="discuss_table"></table>
+
+                            <!-- 最后工具栏 -->
+                            <div class="layui-row" style="text-align:center;height:50px;line-height:50px;">
+                                <button class="layui-btn layui-btn-success" id="returnRrePgae" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-return"></i>返回上页</button>
+                                <button class="layui-btn layui-btn-normal" id="discussBtn" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-add-1"></i>添加评价</button>
+                                <button class="layui-btn layui-btn-normal" id="credit_btn" style="vertical-align:middle;">
+                                    <i class="layui-icon layui-icon-edit"></i>对本次交易评价卖家信用</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div th:replace="pages/userLogin::shopFootBar"></div>
+
+</div>
+
+<script type="text/html" id="operateBtn">
+    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="deleteBtn">
+        <i class="layui-icon layui-icon-delete"></i>删除订单评论</a>
+</script>
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    layui.use(['form','layer', 'table', 'element', 'util'], function(){
+        var form = layui.form;
+        var layer = layui.layer;
+        var table = layui.table;
+        var element = layui.element;
+        var util = layui.util;
+        var $ = layui.$;
+
+        var ordersId = [[${orders.id}]];
+        var goodsId = [[ ${goodInfos.id} ]];
+        var publishId;
+
+        // 加载表单数据
+        loadGoodsInfos();
+
+        function loadGoodsInfos() {
+            $.ajax({
+                url:'/goods/findById/'+goodsId,
+                type:'get',
+                dataType:'json',
+                async:'false',
+                success: function (data) {
+                    if (data.code==0){
+                        publishId = data.dataUser.id;
+                        $('#imgUrl').attr('src', data.data.oneAddress);
+                        form.val('lookGoodInfos', {
+                            "id":data.data.id,
+                            "goodCode":data.data.goodCode,
+                            "name":data.data.name,
+                            "schoolId":data.dataSchool.fullName,
+                            "originalPrice":data.data.originalPrice,
+                            "price":data.data.price,
+                            "available":data.data.available,
+                            "publishMan":data.dataUser.account,
+                            "publishTime":util.toDateString(data.data.publishTime, 'yyyy-MM-dd HH:mm:ss'),
+                            "wechat":data.data.wechat,
+                            "phone":data.data.phone,
+                            "description":data.data.description,
+                        });
+                        // 表单重新渲染
+                        form.render();
+                    } else {
+                        layer.alert("查询出错了，请检查服务器");
+                    }
+                },
+                error: function () {
+                    layer.alert("发生异常，请检查服务器再操作");
+                }
+            });
+        }
+
+        // 下面是显示购买成功后的评价列表
+        //方法级渲染
+        var tableIns = table.render({
+            elem: '#discuss_table',
+            url: '/comments/findComments/'+ordersId,
+            cols: [
+                [
+                    {field:'id', title: '评论编号',width:100},
+                    {field:'startTime', title: '评论时间', width:180,templet:function(d){ return util.toDateString(d.startTime, 'yyyy-MM-dd HH:mm:ss'); }},
+                    {field:'compliance', title: '服务等级',width:170,templet:function(d){ return ClassToStar(d.compliance); }},
+                    {field:'description', title: '详细描述',width:500},
+                    {field:'right', title: '具体操作', align:'center',width:160, toolbar:'#operateBtn'}
+                ]
+            ],
+            page: true,
+            parseData: function(res){
+                return {
+                    success:true,
+                    data:res.data.content,
+                    count:res.data.totalElements,
+                };
+            },
+            response: {
+                statusName: 'success', //规定数据状态的字段名称，默认：code
+                statusCode: true, //规定成功的状态码，默认：0
+            },
+            request: {
+                pageName: 'page', //页码的参数名称，默认：page
+                limitName: 'limit' //每页数据量的参数名，默认：limit
+            },
+            limits: [10,20,30],
+            method: 'POST'
+        });
+
+        // 点击返回事件按钮
+        $("#returnRrePgae").click(function(){
+            window.history.back(-1);
+        });
+
+        // 点击添加评论按钮
+        $("#discussBtn").click(function () {
+            layer.open({
+                type:2,
+                title:'添加订单评论',
+                closeBtn : 1,
+                area : ['600px','350px'],
+                shadeClose : false,
+                content : '/common/addComments/'+ordersId,
+                end : function() {
+                    tableIns.reload();
+                }
+            });
+        });
+        
+        // 点击添加卖家信用分按钮事件
+        $("#credit_btn").click(function () {
+            $.ajax({
+                url:'/userCredit/isExist',
+                data:{'orderId':ordersId, 'publishId':publishId},
+                dataType:'json',
+                type:'post',
+                success: function (data) {
+                    if (data==0){
+                        layer.confirm('本次信用评分，将会记录入卖家信用积分，需要你如实评分，如果你虚假评分，将会扣掉你的信用积分，确定要继续评分吗？',function (index) {
+                            layer.close(index);
+                            layer.open({
+                                type:2,
+                                title:'交易信用评分',
+                                closeBtn : 1,
+                                area : ['570px','550px'],
+                                shadeClose : false,
+                                content : '/userCredit/toAddCredit/'+ordersId
+                            });
+                        });
+                    }else if(data==1){
+                        layer.msg("你已经对卖家的信用积分评价过了，禁止重复评价", {icon:5, time:3000});
+                    }
+                },
+                error: function () {
+                    layer.msg("服务器出现异常，请检查服务器代码", {icon:5, time:3000});
+                }
+            });
+
+        });
+
+        // 监听工具条
+        table.on('tool(discuss_table)', function(obj){
+            var data = obj.data;
+            var layEvent = obj.event;
+            if(layEvent === 'deleteBtn'){
+                var commentId = data.id;
+                layer.confirm('<p style="color: red;">真的删除评论记录吗？</p>',function (index) {
+                    layer.close(index);
+                    $.ajax({
+                        url:'/comments/deleteCommentById/'+commentId,
+                        type:'DELETE',
+                        dataType:'json',
+                        success:function (data) {
+                            if (data==0){
+                                layer.msg("删除成功", {icon: 6});
+                                tableIns.reload();
+                            }else {
+                                layer.alert("删除失败，服务器出了问题");
+                            }
+                        },
+                        error: function () {
+                            layer.alert("服务器出错了，请检查一下网络");
+                        }
+                    });
+                });
+            }
+        });
+
+        function ClassToStar(starId){
+            console.info("--> " + starId);
+            var starName = '';
+            if (starId==1){
+                starName = "★";
+            }else if(starId==2){
+                starName = "★★";
+            }else if (starId==3){
+                starName = "★★★";
+            }else if (starId==4){
+                starName = "★★★★";
+            }else if (starId==5){
+                starName = "★★★★★";
+            } else{
+                starName = "未评等级";
+            }
+            return starName;
+        }
+        
+
+    });
+</script>
+<script type="text/javascript">
+    function readyLogout(){
+        layer.confirm('即将退出系统，要继续吗？', function (index) {
+            window.location.href='/common/logout';
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.gosuncn.shop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,8 @@ import javax.persistence.GenerationType;
  * @Date: 2018-11-13:17:52
  */
 
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 @Data
 @Table(name = "user")
 @Entity
@@ -43,6 +45,13 @@ public class User implements Serializable {
     private Date signTime;
     private String signature;
     private Integer status;
+
+    // 后来添加的字段,用于评估用户信用积分的(是否虚假举报,虚假评分)
+    @Column(name = "false_report")
+    private Integer falseReport;
+
+
+
 
 
 

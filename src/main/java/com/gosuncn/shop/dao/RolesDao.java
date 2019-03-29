@@ -7,8 +7,9 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.io.Serializable;
 
 /**
- * @author: chenxihua
- * @Date: 2018-11-14:15:45
- */
-public interface RolesDao extends JpaRepository<Roles, Integer>, JpaSpecificationExecutor<Roles>, Serializable {
+ * @Author: chenxihua
+ * @Date: 2019/1/25:15:00
+ * @Version 1.0
+ **/
+public interface RolesDao extends JpaRepository<Roles, Integer>, JpaSpecificationExecutor<Roles> {
 }

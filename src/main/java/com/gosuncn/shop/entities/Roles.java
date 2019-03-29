@@ -1,5 +1,6 @@
 package com.gosuncn.shop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,10 +10,11 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:14:51
  */
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler","fieldHandler" })
 @Data
-@Table(name = "role")
+@Table(name = "roles")
 @Entity
-public class Roles implements Serializable {
+public class Roles implements Serializable{
 
 
     @Id

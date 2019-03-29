@@ -31,9 +31,13 @@ public class shiroConfig {
         shiroFilterFactoryBean.setSecurityManager(securityManager);
 
         Map<String, String> map = new HashMap<String, String>();
+
         map.put("/layui/**", "anon");
+        map.put("/biz/**", "anon");
+        map.put("/res/**", "anon");
         map.put("/statics/**", "anon");
         map.put("/favicon.ico", "anon");
+        map.put("/images/**", "anon");
         map.put("/", "anon");
         map.put("/index.html", "anon");
         map.put("/common/register", "anon");
@@ -45,6 +49,12 @@ public class shiroConfig {
         map.put("/user/loginSyst", "anon");
         map.put("/school/saveSchool", "anon");
         map.put("/user/saveByRegister", "anon");
+        // 找回密码的链接
+        map.put("/common/findPassword","anon");
+
+        // 管理员登录页面
+        map.put("/common/admin", "anon");
+
         map.put("/common/firstIndex", "user");
         map.put("/druid/**", "user");
         // 登出
@@ -67,8 +77,28 @@ public class shiroConfig {
     public DefaultWebSecurityManager securityManager(){
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setRealm(userRealm());
+        // 设置 realm
+//        securityManager.setAuthenticator(modularRealmAuthenticator());
+//        List<Realm> realms = new ArrayList<>();
+//        // 添加多个realm
+//        realms.add(userRealm());
+//        realms.add(adminsRealm());
+//        securityManager.setRealms(realms);
+
         return securityManager;
     }
+
+    /**
+     * 系统自带的 Realm管理器， 主要针对多Realm
+     * @return
+     */
+//    @Bean
+//    public ModularRealmAuthenticator modularRealmAuthenticator(){
+//        // 自己重写的ModularRealmAuthenticator
+//        UserModularRealmAuthenticator modularRealmAuthenticator = new UserModularRealmAuthenticator();
+//        modularRealmAuthenticator.setAuthenticationStrategy(new AtLeastOneSuccessfulStrategy());
+//        return modularRealmAuthenticator;
+//    }
 
     /**
      * 凭证匹配器
@@ -91,6 +121,13 @@ public class shiroConfig {
         return userRealm;
     }
 
+//    @Bean
+//    public AdminsRealm adminsRealm(){
+//        AdminsRealm adminsRealm = new AdminsRealm();
+//        adminsRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+//        return adminsRealm;
+//    }
+
     /** 启动shiro在ioc容器中的注解，只有在使用
      * 开启 Shiro 的注解功能 (如 @RequiresRoles,@RequiresPermissions),需借助 SpringAOP 扫描使 用 Shiro 注解的类 ,
      * 并在必要时进行安全逻辑验证,需要配置两个bean(DefaultAdvisorAutoProxyCreator(可选) 和
@@ -103,6 +140,11 @@ public class shiroConfig {
         return proxyCreator;
     }
 
+    /**
+     * 开启shiro aop注解支持, 使用代理方式;所以需要开启代码支持;
+     * @param securityManager
+     * @return
+     */
     @Bean
     public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(DefaultWebSecurityManager securityManager){
         AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>认证用户</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+
+    <div th:replace="pages/userLogin::shopTopBar"></div>
+    <div th:replace="pages/userLogin::shopLightBar"></div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 20px; background-color: #F2F2F2;">
+            <div class="layui-row layui-col-space15">
+
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header" style="font-size: 20px; background-color: #c9c9c9;"><p style="text-align: center;">验证用户邮箱</p></div>
+                        <div class="layui-card-body">
+
+                            <!--  主题内容  -->
+                            <form class="layui-form" action="" lay-filter="verifyUser" id="verifyUser">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">注册邮箱</label>
+                                        <div class="layui-input-inline" style="position:relative">
+                                            <input type="text" id="emailBtn" lay-verify="required|email" class="layui-input" autocomplete="off">
+                                            <span style="position:absolute;left:108%;top:50%;margin-top:-15px" class="layui-btn layui-btn-warm layui-btn-sm" id="sendBtn">获取验证码</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">邮箱验证码</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" id="emailCode" lay-verify="required" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block">
+                                        <button class="layui-btn layui-btn-normal" lay-submit lay-filter="verifyBtn">点击验证</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div th:replace="pages/userLogin::shopFootBar"></div>
+</div>
+
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    layui.use([ 'layer','element', 'form' ], function() {
+        var layer = layui.layer;
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.$;
+
+        var Num = '';
+
+        $("#sendBtn").click(function () {
+            var eV = $("#emailBtn").val();
+            if (eV!=''){
+                $.ajax({
+                    url:'/upload/verifyCode',
+                    type:'GET',
+                    data:{'eVal':eV},
+                    dataType:'JSON',
+                    success:function (data) {
+                        if (data.success){
+                            Num = data.data;
+                            layer.alert(data.msg);
+                        }else{
+                            layer.alert(data.msg);
+                        }
+                    },
+                    error:function () {
+                        layer.alert("服务器出错了，检查网络后，再点击发送吧");
+                    }
+                });
+            }else{
+                layer.alert("邮箱的值为空，请输入邮箱再点击发送");
+            }
+        });
+
+        form.on('submit(verifyBtn)', function(data){
+            // console.log(data);
+            var eV = $("#emailBtn").val();
+            var numCode = $("#emailCode").val();
+            if(numCode!=Num){
+                layer.alert("你输入的验证码不正确，请重新输入");
+            }else{
+                $.ajax({
+                    url:'/user/updateEmail',
+                    type:'PUT',
+                    data:{'eV':eV},
+                    dataType:'json',
+                    success:function (data) {
+                        if (data.success){
+                            layer.alert("用户验证成功");
+                            // 清空表单
+                            $("#verifyUser")[0].reset();
+                        }else{
+                            layer.alert(data.msg);
+                        }
+                    },
+                    error:function () {
+                        layer.alert("服务器出错，请检查网络，再验证");
+                    }
+                });
+            }
+            return false;
+        });
+
+
+    });
+</script>
+<script type="text/javascript">
+    function readyLogout(){
+        layer.confirm('即将退出系统，要继续吗？', function (index) {
+            window.location.href='/common/logout';
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查看下订交易描述</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<br><br>
+<form class="layui-form" action="" lay-filter="addOrder" id="addOrder">
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">交易细节描述</label>
+        <div class="layui-input-block">
+            <textarea class="layui-textarea">[[${orders.details}]]</textarea>
+        </div>
+    </div>
+</form>
+
+<div style="text-align: center;">
+    <a class="layui-btn layui-btn-normal layui-btn-radius" style="text-align: center; font-size: 20px; " onclick="closeDis()">确定退出按钮</a>
+</div>
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    // 关闭弹出层
+    var closeDis = function () {
+        parent.layer.closeAll();
+    }
+</script>
+
+
+</body>
+</html>

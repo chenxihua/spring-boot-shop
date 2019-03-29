@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @author: chenxihua
  * @Date: 2018-11-14:15:47
  */
-public interface SchoolDao extends JpaRepository<School, Integer>, JpaSpecificationExecutor<School>, Serializable {
+public interface SchoolDao extends JpaRepository<School, Integer>, JpaSpecificationExecutor<School> {
 }

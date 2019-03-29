@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查看个人信用积分</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/layui/css/creditCss.css}">
+
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-container">
+    <div class="layui-row" id="credit_show">
+        <p>是否认证:<span class="one_id">[[${vertifyVal}]]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虚假评分次数:<span class="zero_id">[[${falseReport}]]次</span></p>
+
+        <p>交易准时到达信用： <span class="two_id">提前:[[${dataLists[2]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="one_id">准时:[[${dataLists[1]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="zero_id">迟到:[[${dataLists[0]}]]次</span></p>
+        <p>出售商品质量信用： <span class="two_id">优质:[[${dataLists[5]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="one_id">一般:[[${dataLists[4]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="zero_id">次品:[[${dataLists[3]}]]次</span></p>
+        <p>符合发布描述信用： <span class="two_id">符合:[[${dataLists[8]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="one_id">一般:[[${dataLists[7]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="zero_id">偏差:[[${dataLists[6]}]]次</span></p>
+        <p>提供服务好坏信用： <span class="two_id">友好:[[${dataLists[11]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="one_id">一般:[[${dataLists[10]}]]次;</span>&nbsp;&nbsp;&nbsp;<span class="zero_id">不好:[[${dataLists[9]}]]次</span></p>
+
+    </div>
+</div>
+<br>
+<div style="text-align: center;">
+    <a class="layui-btn layui-btn-normal layui-btn-radius" onclick="closeBtn()">退出按钮</a>
+</div>
+
+
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    var closeBtn = function () {
+        parent.layer.closeAll();
+    }
+</script>
+
+</body>
+</html>
